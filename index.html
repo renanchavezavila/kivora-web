@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kivora Stays | Estrategia de Activos & Hospitalidad</title>
+    <meta name="description" content="Elevamos la rentabilidad de propiedades exclusivas y hoteles boutique mediante Revenue Management.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                        brand: {
+                            950: '#1c1917', /* Negro Piedra */
+                            900: '#44403c', 
+                            accent: '#c5a059', /* Dorado Champagne */
+                            light: '#fdfcfb',  
+                            warm: '#f5f5f4'    
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-nav {
+            background: rgba(253, 252, 251, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(253,252,251,0.95) 0%, rgba(253,252,251,0.5) 50%, rgba(253,252,251,0.95) 100%);
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-900 antialiased selection:bg-brand-accent selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-nav border-b border-stone-200/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-brand-950 flex items-center justify-center rounded-sm shadow-xl shadow-stone-200">
+                    <span class="text-white font-extrabold text-xl">K</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-brand-950 font-extrabold text-xl leading-none tracking-tight">Kivora</span>
+                    <span class="text-brand-accent text-[10px] uppercase tracking-[0.3em] font-bold mt-1">Stays</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-stone-500 items-center">
+                <a href="#quienes-somos" class="hover:text-brand-accent transition" data-i18n="nav_about">Nosotros</a>
+                <a href="#caso-exito" class="hover:text-brand-accent transition text-brand-accent" data-i18n="nav_portfolio">Portafolio</a>
+                <a href="#curaduria" class="hover:text-brand-accent transition" data-i18n="nav_standards">Estándares</a>
+                
+                <button id="langToggle" class="border border-stone-300 px-3 py-1 rounded-full hover:bg-brand-950 hover:text-white transition-colors">
+                    ES | EN
+                </button>
+            </div>
+
+            <a href="#auditoria" class="bg-brand-950 text-white px-7 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition-all duration-300 shadow-lg shadow-stone-300" data-i18n="nav_cta">
+                Consultoría
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center overflow-hidden" 
+             style="background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop');">
+        
+        <div class="absolute inset-0 hero-gradient"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center mt-10">
+            <p class="text-brand-accent text-xs font-bold uppercase tracking-[0.4em] mb-6" data-i18n="hero_subtitle_top">Partners en Hospitalidad & Revenue</p>
+            
+            <h1 class="text-5xl md:text-8xl font-extrabold text-brand-950 leading-tight mb-8" data-i18n="hero_title">
+                Hospedaje de Autor.<br>
+                <span class="text-brand-accent font-light italic">Rentabilidad de precisión.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-stone-600 max-w-2xl mx-auto mb-12 font-medium leading-relaxed" data-i18n="hero_desc">
+                Elevamos la gestión de propiedades exclusivas mediante tecnología de precios dinámica y una curaduría excepcional de la experiencia.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#auditoria" class="bg-brand-950 text-white px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-brand-accent transition-all shadow-xl" data-i18n="hero_cta_primary">
+                    Auditoría de Activos
+                </a>
+                <a href="#caso-exito" class="bg-white border border-stone-200 text-brand-950 px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-stone-50 transition" data-i18n="hero_cta_secondary">
+                    Ver Caso de Éxito
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="quienes-somos" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+            <div class="relative z-10">
+                <span class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-4 block" data-i18n="about_label">La Firma</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-brand-950 leading-tight mb-8" data-i18n="about_title">
+                    Donde la hospitalidad se encuentra con el rendimiento.
+                </h2>
+                <div class="text-stone-600 space-y-6 leading-relaxed text-lg font-light">
+                    <p data-i18n="about_p1">
+                        Kivora Stays nace con la misión de redefinir la relación entre el propietario y su activo inmobiliario. No somos administradores tradicionales; somos **Growth Partners**.
+                    </p>
+                    <p data-i18n="about_p2">
+                        Bajo un liderazgo claro, aplicamos criterios de **Revenue Management** avanzados para asegurar que cada propiedad alcance su máximo potencial financiero.
+                    </p>
+                    <div class="pt-6 border-t border-stone-100">
+                        <p class="font-bold text-brand-950 italic" data-i18n="about_quote">
+                            "Cultivamos una comunidad donde la excelencia operativa y la rentabilidad caminan de la mano."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="absolute inset-0 bg-brand-accent/10 rounded-full blur-[100px]"></div>
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1974&auto=format&fit=crop" class="rounded-sm shadow-2xl relative z-10 w-full object-cover h-[500px]" alt="Diseño Kivora">
+            </div>
+        </div>
+    </section>
+
+    <section id="caso-exito" class="py-24 bg-stone-50 border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center mb-16">
+                <span class="text-brand-accent font-bold uppercase tracking-[0.2em] text-xs mb-3 block" data-i18n="case_label">Portfolio Highlight</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-950" data-i18n="case_title">Gestión de Marca: Casa Colibríes</h2>
+                <p class="text-stone-500 mt-4 max-w-2xl mx-auto text-sm" data-i18n="case_desc">
+                    Un ejemplo de nuestra estrategia "Full-Stack": Desde la creación de identidad visual y web propia, hasta la optimización en OTAs y redes sociales.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-2 rounded-sm shadow-xl border border-stone-100">
+                
+                <div class="relative overflow-hidden h-[400px] md:h-[500px] group cursor-pointer">
+                    <div class="absolute top-4 left-4 z-20 bg-brand-950 text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">
+                        Managed by Kivora
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1965&auto=format&fit=crop" 
+                         alt="Casa Colibríes" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+
+                <div class="p-8 md:p-12 space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-brand-950 mb-2" data-i18n="case_subtitle">Ecosistema Digital Integrado</h3>
+                        <p class="text-stone-600 font-light leading-relaxed text-sm" data-i18n="case_text">
+                            Logramos desintermediar las reservas y crear una audiencia fiel mediante una presencia digital coherente y sofisticada.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6 border-b border-stone-100 pb-8">
+                        <div>
+                            <span class="block text-3xl font-light text-brand-accent">4.92</span>
+                            <span class="text-[9px] uppercase font-bold text-stone-400 tracking-widest">Airbnb Rating</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-light text-brand-accent">100%</span>
+                            <span class="text-[9px] uppercase font-bold text-stone-400 tracking-widest">Response Rate</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <p class="text-[10px] uppercase font-bold text-brand-950 tracking-widest mb-4" data-i18n="case_links">Ver Canales Oficiales:</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" target="_blank" class="flex items-center gap-2 px-5 py-3 border border-stone-200 hover:border-brand-accent hover:text-brand-accent transition text-xs font-bold uppercase tracking-wide text-stone-600 bg-stone-50">
+                                <span>🌐 Web</span>
+                            </a>
+                            <a href="#" target="_blank" class="flex items-center gap-2 px-5 py-3 border border-stone-200 hover:border-brand-accent hover:text-brand-accent transition text-xs font-bold uppercase tracking-wide text-stone-600 bg-stone-50">
+                                <span>📸 Instagram</span>
+                            </a>
+                            <a href="#" target="_blank" class="flex items-center gap-2 px-5 py-3 border border-stone-200 hover:border-brand-accent hover:text-brand-accent transition text-xs font-bold uppercase tracking-wide text-stone-600 bg-stone-50">
+                                <span>🏠 Airbnb</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-warm border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="flex flex-col items-center">
+                <span class="text-brand-accent text-5xl font-light mb-2">+32%</span>
+                <p class="text-[10px] uppercase font-bold tracking-widest text-stone-500 text-center" data-i18n="stats_1">Incremento de Ingresos Promedio</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-brand-accent text-5xl font-light mb-2">24/7</span>
+                <p class="text-[10px] uppercase font-bold tracking-widest text-stone-500 text-center" data-i18n="stats_2">Gestión Bilingüe Especializada</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-brand-accent text-5xl font-light mb-2">5.0</span>
+                <p class="text-[10px] uppercase font-bold tracking-widest text-stone-500 text-center" data-i18n="stats_3">Compromiso de Calidad en Reseñas</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="curaduria" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mb-20">
+                <h2 class="text-3xl font-bold text-brand-950 mb-6" data-i18n="standards_title">Estándares de la Comunidad Kivora</h2>
+                <p class="text-stone-500 leading-relaxed" data-i18n="standards_desc">Nuestra cartera se construye bajo criterios de diseño, confort y potencial de mercado. Nos enfocamos en propiedades que ofrecen una propuesta de valor clara.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 bg-white border border-stone-100 shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-brand-950 mb-3 text-sm uppercase tracking-widest" data-i18n="card_1_title">Residencias</h4>
+                    <p class="text-stone-500 text-xs leading-relaxed" data-i18n="card_1_desc">Casas integrales con identidad arquitectónica y confort superior.</p>
+                </div>
+                <div class="p-8 bg-white border border-stone-100 shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-brand-950 mb-3 text-sm uppercase tracking-widest" data-i18n="card_2_title">Hoteles</h4>
+                    <p class="text-stone-500 text-xs leading-relaxed" data-i18n="card_2_desc">Establecimientos boutique que buscan profesionalizar su canal digital.</p>
+                </div>
+                <div class="p-8 bg-white border border-stone-100 shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-brand-950 mb-3 text-sm uppercase tracking-widest" data-i18n="card_3_title">Suites</h4>
+                    <p class="text-stone-500 text-xs leading-relaxed" data-i18n="card_3_desc">Departamentos premium en ubicaciones con alta demanda corporativa.</p>
+                </div>
+                <div class="p-8 bg-white border border-stone-100 shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-brand-950 mb-3 text-sm uppercase tracking-widest" data-i18n="card_4_title">Retiros</h4>
+                    <p class="text-stone-500 text-xs leading-relaxed" data-i18n="card_4_desc">Espacios únicos que conectan al huésped con el entorno de manera exclusiva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="auditoria" class="py-24 bg-white relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-brand-warm rounded-sm p-10 md:p-20 shadow-2xl flex flex-col md:flex-row gap-16 items-center border border-stone-200">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-extrabold text-brand-950 mb-6" data-i18n="form_title">Inicie su Auditoría Estratégica</h2>
+                    <p class="text-stone-600 mb-8 leading-relaxed" data-i18n="form_desc">Descubra el potencial oculto de su propiedad. Analizamos su competencia y su posicionamiento actual sin compromiso.</p>
+                    <ul class="space-y-4 text-xs font-bold uppercase tracking-widest text-brand-accent">
+                        <li data-i18n="form_check_1">✓ Análisis de Revenue Gratuito</li>
+                        <li data-i18n="form_check_2">✓ Auditoría Visual del Anuncio</li>
+                        <li data-i18n="form_check_3">✓ Proyección de Facturación 2026</li>
+                    </ul>
+                </div>
+
+                <div class="md:w-1/2 w-full">
+                    <form id="auditForm" class="space-y-6">
+                        <input type="text" id="nombre" data-ph="ph_name" placeholder="Nombre y Apellido" required class="w-full bg-white border-b border-stone-300 p-4 outline-none focus:border-brand-accent transition">
+                        <input type="tel" id="whatsapp" data-ph="ph_phone" placeholder="WhatsApp (Ej: 0991234567)" required class="w-full bg-white border-b border-stone-300 p-4 outline-none focus:border-brand-accent transition">
+                        <input type="text" id="propiedad" data-ph="ph_prop" placeholder="Ubicación o Enlace de Propiedad" class="w-full bg-white border-b border-stone-300 p-4 outline-none focus:border-brand-accent transition">
+                        
+                        <button type="submit" class="w-full bg-brand-950 text-white font-bold py-5 uppercase tracking-[0.3em] text-xs hover:bg-brand-accent transition shadow-xl" data-i18n="form_btn">
+                            Enviar a WhatsApp Oficial
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-light py-16 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-10">
+            <div>
+                <p class="text-brand-950 font-extrabold text-2xl tracking-tighter mb-2">Kivora Stays</p>
+                <p class="text-[10px] uppercase font-bold tracking-[0.4em] text-stone-400" data-i18n="footer_slogan">Growth Partners en Hospitalidad</p>
+            </div>
+            
+            <div class="flex gap-10 text-[10px] font-bold uppercase tracking-widest text-stone-500">
+                <a href="#quienes-somos" class="hover:text-brand-accent transition" data-i18n="nav_about">Nosotros</a>
+                <a href="mailto:renan@kivorastays.com" class="hover:text-brand-accent transition" data-i18n="footer_contact">Contacto Directo</a>
+            </div>
+
+            <div class="text-[10px] text-stone-400">
+                © 2026 Kivora Stays. Ecuador.<br>
+                <span class="mt-1 block">Liderado por Renan Chavez.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. DICCIONARIO DE TRADUCCIÓN
+        const translations = {
+            es: {
+                nav_about: "Nosotros",
+                nav_portfolio: "Portafolio",
+                nav_standards: "Estándares",
+                nav_cta: "Consultoría",
+                hero_subtitle_top: "Partners en Hospitalidad & Revenue",
+                hero_title: `Hospedaje de Autor.<br><span class="text-brand-accent font-light italic">Rentabilidad de precisión.</span>`,
+                hero_desc: "Elevamos la gestión de propiedades exclusivas mediante tecnología de precios dinámica y una curaduría excepcional de la experiencia.",
+                hero_cta_primary: "Auditoría de Activos",
+                hero_cta_secondary: "Ver Caso de Éxito",
+                about_label: "La Firma",
+                about_title: "Donde la hospitalidad se encuentra con el rendimiento.",
+                about_p1: "Kivora Stays nace con la misión de redefinir la relación entre el propietario y su activo inmobiliario. No somos administradores tradicionales; somos **Growth Partners**.",
+                about_p2: "Bajo un liderazgo claro, aplicamos criterios de **Revenue Management** avanzados para asegurar que cada propiedad alcance su máximo potencial financiero.",
+                about_quote: "\"Cultivamos una comunidad donde la excelencia operativa y la rentabilidad caminan de la mano.\"",
+                
+                // NUEVA SECCION CASA COLIBRIES
+                case_label: "Portfolio Highlight",
+                case_title: "Gestión de Marca: Casa Colibríes",
+                case_desc: "Un ejemplo de nuestra estrategia 'Full-Stack': Desde la creación de identidad visual y web propia, hasta la optimización en OTAs y redes sociales.",
+                case_subtitle: "Ecosistema Digital Integrado",
+                case_text: "Logramos desintermediar las reservas y crear una audiencia fiel mediante una presencia digital coherente y sofisticada.",
+                case_links: "Ver Canales Oficiales:",
+
+                stats_1: "Incremento de Ingresos Promedio",
+                stats_2: "Gestión Bilingüe Especializada",
+                stats_3: "Compromiso de Calidad en Reseñas",
+                standards_title: "Estándares de la Comunidad Kivora",
+                standards_desc: "Nuestra cartera se construye bajo criterios de diseño, confort y potencial de mercado. Nos enfocamos en propiedades que ofrecen una propuesta de valor clara.",
+                card_1_title: "Residencias",
+                card_1_desc: "Casas integrales con identidad arquitectónica y confort superior.",
+                card_2_title: "Hoteles",
+                card_2_desc: "Establecimientos boutique que buscan profesionalizar su canal digital.",
+                card_3_title: "Suites",
+                card_3_desc: "Departamentos premium en ubicaciones con alta demanda corporativa.",
+                card_4_title: "Retiros",
+                card_4_desc: "Espacios únicos que conectan al huésped con el entorno de manera exclusiva.",
+                form_title: "Inicie su Auditoría Estratégica",
+                form_desc: "Descubra el potencial oculto de su propiedad. Analizamos su competencia y su posicionamiento actual sin compromiso.",
+                form_check_1: "✓ Análisis de Revenue Gratuito",
+                form_check_2: "✓ Auditoría Visual del Anuncio",
+                form_check_3: "✓ Proyección de Facturación 2026",
+                form_btn: "Enviar a WhatsApp Oficial",
+                footer_slogan: "Growth Partners en Hospitalidad",
+                footer_contact: "Contacto Directo",
+                ph_name: "Nombre y Apellido",
+                ph_phone: "WhatsApp (Ej: 099...)",
+                ph_prop: "Ubicación o Enlace de Propiedad"
+            },
+            en: {
+                nav_about: "About",
+                nav_portfolio: "Portfolio",
+                nav_standards: "Standards",
+                nav_cta: "Free Audit",
+                hero_subtitle_top: "Hospitality & Revenue Partners",
+                hero_title: `Signature Hosting.<br><span class="text-brand-accent font-light italic">Precision Profitability.</span>`,
+                hero_desc: "We elevate exclusive property management through dynamic pricing technology and exceptional experience curation.",
+                hero_cta_primary: "Asset Audit",
+                hero_cta_secondary: "View Case Study",
+                about_label: "The Firm",
+                about_title: "Where hospitality meets high performance.",
+                about_p1: "Kivora Stays redefines the relationship between the owner and their real estate asset. We are not traditional managers; we are **Growth Partners**.",
+                about_p2: "Under clear leadership, we apply advanced **Revenue Management** criteria to ensure every property reaches its maximum financial potential.",
+                about_quote: "\"We cultivate a community where operational excellence and profitability walk hand in hand.\"",
+                
+                // NUEVA SECCION CASA COLIBRIES (EN)
+                case_label: "Portfolio Highlight",
+                case_title: "Brand Management: Casa Colibríes",
+                case_desc: "A prime example of our 'Full-Stack' strategy: From visual identity creation and direct website, to OTA optimization and community management.",
+                case_subtitle: "Integrated Digital Ecosystem",
+                case_text: "We achieved reservation disintermediation and built a loyal audience through a coherent and sophisticated digital presence.",
+                case_links: "Visit Official Channels:",
+
+                stats_1: "Average Revenue Increase",
+                stats_2: "Specialized Bilingual Management",
+                stats_3: "Quality Commitment in Reviews",
+                standards_title: "Kivora Community Standards",
+                standards_desc: "Our portfolio is built on design, comfort, and market potential criteria. We focus on properties offering a clear value proposition.",
+                card_1_title: "Residences",
+                card_1_desc: "Integral homes with architectural identity and superior comfort.",
+                card_2_title: "Hotels",
+                card_2_desc: "Boutique establishments seeking to professionalize their digital channel.",
+                card_3_title: "Suites",
+                card_3_desc: "Premium apartments in locations with high corporate demand.",
+                card_4_title: "Retreats",
+                card_4_desc: "Unique spaces that connect the guest with the environment exclusively.",
+                form_title: "Start Your Strategic Audit",
+                form_desc: "Discover your property's hidden potential. We analyze your competition and current positioning with no strings attached.",
+                form_check_1: "✓ Free Revenue Analysis",
+                form_check_2: "✓ Visual Listing Audit",
+                form_check_3: "✓ 2026 Revenue Projection",
+                form_btn: "Send to Official WhatsApp",
+                footer_slogan: "Hospitality Growth Partners",
+                footer_contact: "Direct Contact",
+                ph_name: "Full Name",
+                ph_phone: "WhatsApp / Phone",
+                ph_prop: "Location or Property Link"
+            }
+        };
+
+        // 2. FUNCION CAMBIO DE IDIOMA
+        const langToggle = document.getElementById('langToggle');
+        let currentLang = 'es';
+
+        function updateContent(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('[data-ph]').forEach(el => {
+                const key = el.getAttribute('data-ph');
+                if(translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
+                }
+            });
+        }
+
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            updateContent(currentLang);
+        });
+
+        // 3. FUNCION ENVIO A WHATSAPP
+        document.getElementById('auditForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const phone = document.getElementById('whatsapp').value;
+            const prop = document.getElementById('prop
