@@ -25,7 +25,6 @@
         .hero-gradient { background: linear-gradient(135deg, rgba(253,252,251,0.95) 0%, rgba(253,252,251,0.3) 50%, rgba(253,252,251,0.95) 100%); }
         .unit-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
         .unit-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
-        .process-step:hover .step-number { background-color: #c5a059; color: white; border-color: #c5a059; }
     </style>
 </head>
 
@@ -42,7 +41,7 @@
             </div>
             <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-stone-500">
                 <a href="#portfolio" class="hover:text-brand-accent transition">Unidades</a>
-                <a href="#proceso" class="hover:text-brand-accent transition">Cómo Funciona</a>
+                <a href="#proceso" class="hover:text-brand-accent transition">Ecosistema</a>
                 <a href="#rendimiento" class="hover:text-brand-accent transition">Márgenes</a>
                 <button class="langToggleBtn border border-stone-300 px-3 py-1 rounded-full hover:bg-brand-950 hover:text-white transition-colors">ES | EN</button>
             </div>
@@ -54,10 +53,7 @@
         <div class="absolute inset-0 hero-gradient"></div>
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
             <p class="text-brand-accent text-xs font-bold uppercase tracking-[0.4em] mb-6">Mexico · Spain · Ecuador</p>
-            <h1 class="text-5xl md:text-8xl font-extrabold text-brand-950 leading-tight mb-8">
-                Operadora Global de<br><span class="text-brand-accent font-light italic">Activos de Lujo.</span>
-            </h1>
-            <p class="text-lg md:text-xl text-stone-600 max-w-2xl mx-auto mb-12 font-medium">Hospitalidad de autor y tecnología para maximizar el rendimiento de su propiedad.</p>
+            <h1 class="text-5xl md:text-8xl font-extrabold text-brand-950 leading-tight mb-8">Operadora Global de<br><span class="text-brand-accent font-light italic">Activos de Lujo.</span></h1>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#auditoria" class="bg-brand-950 text-white px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-brand-accent transition shadow-xl">Auditoría de Activo</a>
                 <a href="#portfolio" class="bg-white border border-stone-200 text-brand-950 px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-stone-50 transition">Ver Portafolio</a>
@@ -68,45 +64,37 @@
     <section id="portfolio" class="py-24 relative bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1620626012053-bd32fb8e03c2?q=80&w=2070&auto=format&fit=crop');">
         <div class="absolute inset-0 bg-brand-light/95"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 text-center mb-16">
-            <h2 class="text-4xl font-extrabold text-brand-950 mb-4">El Estándar Kivora Global</h2>
-            <p class="text-stone-500 max-w-2xl mx-auto">Una colección curada de unidades de alto rendimiento.</p>
+            <h2 class="text-4xl font-extrabold text-brand-950 mb-4 text-center">Nuestro Portafolio Matriz</h2>
+            <p class="text-stone-500 max-w-2xl mx-auto text-center">Gestionamos unidades estratégicas en mercados de alta rentabilidad.</p>
         </div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <a href="https://www.airbnb.com.ec/rooms/1172501615958996589" target="_blank" class="unit-card block bg-white p-2 rounded-sm border border-stone-200 group relative overflow-hidden h-[380px]">
                 <div class="h-full overflow-hidden relative rounded-sm">
-                    <img src="casa.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Casa Colibries">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-950/90 via-brand-950/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity z-10"></div>
-                    <div class="absolute bottom-0 left-0 p-6 z-20 text-white">
-                        <h4 class="font-bold text-lg uppercase tracking-wide mb-2">Casa Colibríes</h4>
-                        <p class="text-[10px] uppercase tracking-widest opacity-80 mb-4 text-left">Ecuador · Cotacachi</p>
-                         <span class="text-[9px] font-bold uppercase tracking-widest border-b border-brand-accent pb-1 text-brand-accent">Ver Disponibilidad &rarr;</span>
+                    <img src="casa.jpg" class="w-full h-full object-cover" alt="Casa Colibries">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-950/90 via-transparent to-transparent z-10"></div>
+                    <div class="absolute bottom-0 left-0 p-6 z-20 text-white text-left">
+                        <h4 class="font-bold text-lg uppercase tracking-wide text-left">Casa Colibríes</h4>
+                        <p class="text-[10px] uppercase tracking-widest opacity-80 text-left">Ecuador · Cotacachi</p>
                     </div>
                 </div>
             </a>
-            <a href="#auditoria" class="unit-card block bg-brand-950 p-2 rounded-sm border border-brand-950 group relative overflow-hidden h-[380px]">
-                <div class="h-full overflow-hidden relative rounded-sm text-center">
-                    <img src="https://images.unsplash.com/photo-1605647580999-c4f545b4f759?q=80&w=1974&auto=format&fit=crop" class="w-full h-full object-cover grayscale opacity-40">
-                    <div class="absolute inset-0 p-6 z-20 text-white flex flex-col justify-center items-center">
-                        <h4 class="font-extrabold text-2xl uppercase tracking-wide mb-2">¿Tu Propiedad<br>Aquí?</h4>
-                        <p class="text-[10px] uppercase tracking-widest opacity-80 mb-6 text-center">México · Riviera Maya</p>
-                        <span class="bg-brand-accent text-white px-5 py-2 text-[9px] font-bold uppercase tracking-widest">Aplicar</span>
-                    </div>
+            <a href="#auditoria" class="unit-card block bg-brand-950 p-2 rounded-sm border border-brand-950 group h-[380px] relative overflow-hidden">
+                <div class="h-full flex flex-col justify-center items-center text-center p-6 border border-brand-accent/30 m-2">
+                    <h4 class="text-white font-bold text-xl uppercase mb-2">México</h4>
+                    <p class="text-brand-accent text-[10px] uppercase tracking-widest mb-6 text-center">¿Tu Propiedad Aquí?</p>
+                    <span class="bg-white text-brand-950 px-4 py-2 text-[9px] font-bold uppercase tracking-widest">Aplicar</span>
                 </div>
             </a>
-            <a href="#auditoria" class="unit-card block bg-brand-950 p-2 rounded-sm border border-brand-950 group relative overflow-hidden h-[380px]">
-                <div class="h-full overflow-hidden relative rounded-sm text-center">
-                    <img src="https://images.unsplash.com/photo-1543716627-832256763109?q=80&w=1973&auto=format&fit=crop" class="w-full h-full object-cover grayscale opacity-40">
-                    <div class="absolute inset-0 p-6 z-20 text-white flex flex-col justify-center items-center">
-                        <h4 class="font-extrabold text-2xl uppercase tracking-wide mb-2">Expansión<br>Europa</h4>
-                        <p class="text-[10px] uppercase tracking-widest opacity-80 mb-6 text-center">España · Madrid</p>
-                        <span class="bg-brand-accent text-white px-5 py-2 text-[9px] font-bold uppercase tracking-widest">Solicitar</span>
-                    </div>
+            <a href="#auditoria" class="unit-card block bg-brand-950 p-2 rounded-sm border border-brand-950 group h-[380px] relative overflow-hidden">
+                <div class="h-full flex flex-col justify-center items-center text-center p-6 border border-brand-accent/30 m-2">
+                    <h4 class="text-white font-bold text-xl uppercase mb-2">España</h4>
+                    <p class="text-brand-accent text-[10px] uppercase tracking-widest mb-6 text-center">Expansión Europa</p>
+                    <span class="bg-white text-brand-950 px-4 py-2 text-[9px] font-bold uppercase tracking-widest">Solicitar</span>
                 </div>
             </a>
-            <div class="unit-card flex flex-col justify-center items-center bg-white p-8 rounded-sm text-center h-[380px] border border-stone-200 shadow-sm">
+            <div class="unit-card flex flex-col justify-center items-center bg-white p-8 rounded-sm text-center h-[380px] border border-stone-200">
                 <span class="text-brand-accent text-7xl font-extrabold mb-4">08</span>
-                <p class="text-[10px] font-bold uppercase tracking-widest text-stone-500">Unidades Activas<br>en Gestión Global</p>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-stone-500 text-center">Unidades Globales</p>
             </div>
         </div>
     </section>
@@ -114,60 +102,60 @@
     <section id="proceso" class="py-24 bg-white border-b border-stone-100">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-20">
-                <span class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-4 block">El Ecosistema Kivora</span>
-                <h2 class="text-4xl font-extrabold text-brand-950">Transparencia en cada paso.</h2>
+                <span class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-4 block">Gestión de Autor</span>
+                <h2 class="text-4xl font-extrabold text-brand-950 text-center">Transparencia en cada paso.</h2>
             </div>
 
             <div class="grid md:grid-cols-2 gap-16 lg:gap-32">
-                <div>
-                    <h3 class="text-xl font-bold uppercase tracking-widest text-brand-accent mb-10 border-b border-stone-100 pb-4">Para el Propietario</h3>
-                    <div class="space-y-12">
-                        <div class="process-step flex gap-6 text-left">
-                            <div class="step-number w-10 h-10 border border-stone-200 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold transition-all">01</div>
+                <div class="text-left">
+                    <h3 class="text-xl font-bold uppercase tracking-widest text-brand-950 mb-10 border-b-2 border-brand-accent pb-4 inline-block">Para el Propietario</h3>
+                    <div class="space-y-12 mt-4">
+                        <div class="flex gap-6 text-left">
+                            <div class="w-10 h-10 bg-brand-950 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">01</div>
                             <div>
-                                <h4 class="font-bold text-sm uppercase mb-2">Auditoría & Firma</h4>
-                                <p class="text-stone-500 text-sm leading-relaxed">Analizamos el potencial de su activo y formalizamos la alianza con contratos digitales transparentes.</p>
+                                <h4 class="font-bold text-sm uppercase mb-2 text-left">Auditoría & Firma</h4>
+                                <p class="text-stone-500 text-sm leading-relaxed text-left">Analizamos el potencial de su activo y formalizamos la alianza con contratos digitales transparentes.</p>
                             </div>
                         </div>
-                        <div class="process-step flex gap-6 text-left">
-                            <div class="step-number w-10 h-10 border border-stone-200 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold transition-all">02</div>
+                        <div class="flex gap-6 text-left">
+                            <div class="w-10 h-10 bg-brand-950 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">02</div>
                             <div>
-                                <h4 class="font-bold text-sm uppercase mb-2">Curaduría Visual</h4>
-                                <p class="text-stone-500 text-sm leading-relaxed">Sesión de fotos HD y optimización de perfiles en las principales plataformas del mundo.</p>
+                                <h4 class="font-bold text-sm uppercase mb-2 text-left">Curaduría Visual</h4>
+                                <p class="text-stone-500 text-sm leading-relaxed text-left">Sesión de fotos HD y optimización de perfiles en las principales plataformas del mundo.</p>
                             </div>
                         </div>
-                        <div class="process-step flex gap-6 text-left">
-                            <div class="step-number w-10 h-10 border border-stone-200 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold transition-all">03</div>
+                        <div class="flex gap-6 text-left">
+                            <div class="w-10 h-10 bg-brand-950 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">03</div>
                             <div>
-                                <h4 class="font-bold text-sm uppercase mb-2">Gestión de Rendimiento</h4>
-                                <p class="text-stone-500 text-sm leading-relaxed">Activamos algoritmos de precios dinámicos para maximizar su ingreso neto cada noche.</p>
+                                <h4 class="font-bold text-sm uppercase mb-2 text-left">Gestión ROI</h4>
+                                <p class="text-stone-500 text-sm leading-relaxed text-left">Activamos algoritmos de precios dinámicos para maximizar su ingreso neto cada noche.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <h3 class="text-xl font-bold uppercase tracking-widest text-brand-950 mb-10 border-b border-stone-100 pb-4">Para el Huésped</h3>
-                    <div class="space-y-12">
-                        <div class="process-step flex gap-6 text-left">
-                            <div class="step-number w-10 h-10 border border-stone-950 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold transition-all bg-brand-950 text-white border-brand-950">01</div>
+                <div class="text-left">
+                    <h3 class="text-xl font-bold uppercase tracking-widest text-brand-950 mb-10 border-b-2 border-brand-accent pb-4 inline-block">Para el Huésped</h3>
+                    <div class="space-y-12 mt-4 text-left">
+                        <div class="flex gap-6 text-left">
+                            <div class="w-10 h-10 bg-brand-950 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">01</div>
                             <div>
-                                <h4 class="font-bold text-sm uppercase mb-2">Reserva Digital</h4>
-                                <p class="text-stone-500 text-sm leading-relaxed">Proceso de reserva fluido y comunicación inmediata vía IA o conserje humano.</p>
+                                <h4 class="font-bold text-sm uppercase mb-2 text-left">Reserva Digital</h4>
+                                <p class="text-stone-500 text-sm leading-relaxed text-left">Proceso de reserva fluido y comunicación inmediata vía IA o conserje humano.</p>
                             </div>
                         </div>
-                        <div class="process-step flex gap-6 text-left">
-                            <div class="step-number w-10 h-10 border border-stone-950 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold transition-all bg-brand-950 text-white border-brand-950">02</div>
+                        <div class="flex gap-6 text-left">
+                            <div class="w-10 h-10 bg-brand-950 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">02</div>
                             <div>
-                                <h4 class="font-bold text-sm uppercase mb-2">Check-in Inteligente</h4>
-                                <p class="text-stone-500 text-sm leading-relaxed">Acceso autónomo mediante cerraduras digitales. Sin esperas, sin llaves físicas.</p>
+                                <h4 class="font-bold text-sm uppercase mb-2 text-left">Smart Check-in</h4>
+                                <p class="text-stone-500 text-sm leading-relaxed text-left">Acceso autónomo mediante cerraduras digitales. Sin esperas ni llaves físicas.</p>
                             </div>
                         </div>
-                        <div class="process-step flex gap-6 text-left">
-                            <div class="step-number w-10 h-10 border border-stone-950 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold transition-all bg-brand-950 text-white border-brand-950">03</div>
+                        <div class="flex gap-6 text-left">
+                            <div class="w-10 h-10 bg-brand-950 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">03</div>
                             <div>
-                                <h4 class="font-bold text-sm uppercase mb-2">Estancia Curada</h4>
-                                <p class="text-stone-500 text-sm leading-relaxed">Soporte 24/7 y estándares de limpieza de nivel hotelero durante toda la estancia.</p>
+                                <h4 class="font-bold text-sm uppercase mb-2 text-left">Estancia Curada</h4>
+                                <p class="text-stone-500 text-sm leading-relaxed text-left">Soporte 24/7 y estándares de limpieza de nivel hotelero durante toda la estancia.</p>
                             </div>
                         </div>
                     </div>
@@ -180,26 +168,24 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid md:grid-cols-2 gap-20 items-center">
                 <div class="text-left">
-                    <span class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-4 block">Transparencia Financiera</span>
-                    <h2 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">Un modelo diseñado para su rentabilidad.</h2>
-                    <p class="text-stone-400 mb-10 text-lg leading-relaxed text-left">No somos un gasto, somos una inversión. Nuestro esquema de gestión integral asegura que usted reciba el máximo beneficio neto.</p>
-                    <div class="grid grid-cols-2 gap-8">
+                    <span class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-4 block">Márgenes de Éxito</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight text-left">Un modelo diseñado para su rentabilidad.</h2>
+                    <div class="grid grid-cols-2 gap-8 text-left">
                         <div class="border-l-2 border-brand-accent pl-6 text-left">
-                            <span class="block text-3xl font-bold mb-1">80%</span>
-                            <span class="text-[10px] uppercase tracking-[0.2em] text-stone-500 font-bold">Propietario</span>
+                            <span class="block text-3xl font-bold mb-1 text-left">80%</span>
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-stone-500 font-bold text-left">Propietario</span>
                         </div>
                         <div class="border-l-2 border-stone-700 pl-6 text-left">
-                            <span class="block text-3xl font-bold mb-1">20%</span>
-                            <span class="text-[10px] uppercase tracking-[0.2em] text-stone-500 font-bold">Gestión</span>
+                            <span class="block text-3xl font-bold mb-1 text-left">20%</span>
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-stone-500 font-bold text-left">Gestión</span>
                         </div>
                     </div>
                 </div>
                 <div class="bg-white/5 backdrop-blur-sm p-10 border border-white/10 rounded-sm text-left">
-                    <h4 class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-6 text-left">¿Qué incluye nuestro 20%?</h4>
-                    <ul class="space-y-4 text-sm text-stone-300">
-                        <li class="flex items-start gap-3"><span class="text-brand-accent mt-1">✓</span><span><b>Revenue Management:</b> Precios dinámicos diarios.</span></li>
-                        <li class="flex items-start gap-3"><span class="text-brand-accent mt-1">✓</span><span><b>Marketing:</b> Presencia en 20+ canales globales.</span></li>
-                        <li class="flex items-start gap-3"><span class="text-brand-accent mt-1">✓</span><span><b>Soporte:</b> Atención completa al huésped 24/7.</span></li>
+                    <ul class="space-y-4 text-sm text-stone-300 text-left">
+                        <li class="flex items-start gap-3"><span class="text-brand-accent mt-1">✓</span><span class="text-left">Revenue Management diario.</span></li>
+                        <li class="flex items-start gap-3"><span class="text-brand-accent mt-1">✓</span><span class="text-left">Marketing en 20+ canales globales.</span></li>
+                        <li class="flex items-start gap-3"><span class="text-brand-accent mt-1">✓</span><span class="text-left">Soporte integral al huésped 24/7.</span></li>
                     </ul>
                 </div>
             </div>
@@ -207,14 +193,14 @@
     </section>
 
     <section id="auditoria" class="py-24 bg-white">
-        <div class="max-w-3xl mx-auto px-6 text-center text-left">
-            <h2 class="text-3xl font-extrabold mb-12 text-center leading-tight">Inicie su Auditoría de Rentabilidad</h2>
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-12 text-center">Inicie su Auditoría de Rentabilidad</h2>
             <form id="auditForm" class="space-y-6 text-left">
                 <div class="grid md:grid-cols-2 gap-6">
                     <input type="text" id="nombre" placeholder="Nombre completo" required class="w-full border-b border-stone-200 py-4 outline-none focus:border-brand-accent transition bg-transparent">
-                    <input type="tel" id="whatsapp" placeholder="WhatsApp (Ej: +593...)" required class="w-full border-b border-stone-200 py-4 outline-none focus:border-brand-accent transition bg-transparent">
+                    <input type="tel" id="whatsapp" placeholder="WhatsApp" required class="w-full border-b border-stone-200 py-4 outline-none focus:border-brand-accent transition bg-transparent">
                 </div>
-                <input type="text" id="propiedad" placeholder="Enlace o ubicación de su propiedad" class="w-full border-b border-stone-200 py-4 outline-none focus:border-brand-accent transition bg-transparent">
+                <input type="text" id="propiedad" placeholder="Ubicación de su propiedad" class="w-full border-b border-stone-200 py-4 outline-none focus:border-brand-accent transition bg-transparent">
                 <button type="submit" class="w-full bg-brand-950 text-white font-bold py-5 uppercase tracking-[0.3em] text-xs hover:bg-brand-accent transition shadow-xl">Enviar a Matriz Global</button>
             </form>
         </div>
@@ -224,25 +210,25 @@
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12 text-left">
             <div class="md:w-1/4">
                 <p class="text-brand-950 font-extrabold text-2xl tracking-tighter mb-2">Kivora Stays</p>
-                <p class="text-[10px] uppercase font-bold tracking-[0.4em] text-stone-400 leading-relaxed text-left">Operadora Global de Hospitalidad de Autor</p>
+                <p class="text-[10px] uppercase font-bold tracking-[0.4em] text-stone-400 text-left">Operadora Global de Hospitalidad</p>
             </div>
             <div class="flex flex-col gap-4 text-[10px] font-bold uppercase tracking-widest text-stone-500 text-left">
-                <span class="text-brand-accent border-b border-stone-200 pb-2 mb-2 text-left">Sedes Regionales</span>
-                <div class="flex flex-col gap-3 text-left">
+                <span class="text-brand-accent border-b border-stone-200 pb-2 mb-2 text-left uppercase">Sedes Regionales</span>
+                <div class="flex flex-col gap-3 text-left leading-relaxed">
                     <a href="mailto:ecuador@kivorastays.com" class="hover:text-brand-accent flex items-center gap-2"><span class="text-sm">🇪🇨</span> ecuador@kivorastays.com</a>
                     <a href="mailto:mexico@kivorastays.com" class="hover:text-brand-accent flex items-center gap-2"><span class="text-sm">🇲🇽</span> mexico@kivorastays.com</a>
                     <a href="mailto:espana@kivorastays.com" class="hover:text-brand-accent flex items-center gap-2"><span class="text-sm">🇪🇸</span> espana@kivorastays.com</a>
                 </div>
             </div>
             <div class="flex flex-col gap-4 text-[10px] font-bold uppercase tracking-widest text-stone-500 text-left">
-                <span class="text-brand-accent border-b border-stone-200 pb-2 mb-2 text-left">Atención Directa</span>
-                <div class="flex flex-col gap-3 text-left">
-                    <a href="mailto:reservas@kivorastays.com" class="hover:text-brand-accent">reservas@kivorastays.com</a>
+                <span class="text-brand-accent border-b border-stone-200 pb-2 mb-2 text-left uppercase font-bold">Contacto Matriz</span>
+                <div class="flex flex-col gap-3 text-left leading-relaxed">
                     <a href="mailto:gerencia@kivorastays.com" class="hover:text-brand-accent">gerencia@kivorastays.com</a>
+                    <a href="mailto:reservas@kivorastays.com" class="hover:text-brand-accent">reservas@kivorastays.com</a>
                 </div>
             </div>
-            <div class="text-[9px] text-stone-400 uppercase tracking-widest md:text-right text-left">
-                © 2026 Kivora Matriz. EC · MX · ES
+            <div class="text-[9px] text-stone-400 uppercase tracking-widest md:text-right text-left leading-relaxed">
+                © 2026 Kivora Matriz.<br>EC · MX · ES
             </div>
         </div>
     </footer>
