@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kivora Stays | Matriz Global de Gestión de Activos</title>
-    <meta name="description" content="Operadora global en México, España y Ecuador. Maximizamos la rentabilidad de 8+ unidades de lujo.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,12 +14,7 @@
                 fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
                 extend: {
                     colors: {
-                        brand: {
-                            950: '#1c1917',
-                            accent: '#c5a059',
-                            light: '#fdfcfb',
-                            warm: '#f5f5f4'
-                        }
+                        brand: { 950: '#1c1917', accent: '#c5a059', light: '#fdfcfb', warm: '#f5f5f4' }
                     }
                 }
             }
@@ -29,29 +23,31 @@
     <style>
         .glass-nav { background: rgba(253, 252, 251, 0.95); backdrop-filter: blur(12px); }
         .hero-gradient { background: linear-gradient(135deg, rgba(253,252,251,0.95) 0%, rgba(253,252,251,0.3) 50%, rgba(253,252,251,0.95) 100%); }
-        .card-shadow { transition: all 0.4s ease; }
-        .card-shadow:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .unit-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .unit-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); }
     </style>
 </head>
-<body class="bg-brand-light text-brand-950 antialiased selection:bg-brand-accent selection:text-white">
+
+<body class="bg-brand-light text-brand-950 antialiased">
 
     <nav class="fixed w-full z-50 glass-nav border-b border-stone-200/50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-brand-950 flex items-center justify-center rounded-sm">
-                    <span class="text-white font-extrabold text-xl">K</span>
-                </div>
+                <div class="w-9 h-9 bg-brand-950 flex items-center justify-center rounded-sm text-white font-extrabold text-xl">K</div>
                 <div class="flex flex-col">
                     <span class="text-brand-950 font-extrabold text-xl leading-none tracking-tight">Kivora</span>
                     <span class="text-brand-accent text-[10px] uppercase tracking-[0.3em] font-bold mt-1">Stays</span>
                 </div>
             </div>
+
             <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-stone-500">
                 <a href="#matriz" class="hover:text-brand-accent transition" data-i18n="nav_about">Matriz</a>
                 <a href="#portfolio" class="hover:text-brand-accent transition" data-i18n="nav_portfolio">Unidades</a>
                 <a href="#management" class="hover:text-brand-accent transition" data-i18n="nav_mgmt">Gestión ROI</a>
                 <button class="langToggleBtn border border-stone-300 px-3 py-1 rounded-full hover:bg-brand-950 hover:text-white transition-colors">ES | EN</button>
             </div>
+
             <a href="#auditoria" class="bg-brand-950 text-white px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition shadow-lg" data-i18n="nav_cta">Consultoría</a>
         </div>
     </nav>
@@ -63,10 +59,10 @@
             <h1 class="text-5xl md:text-8xl font-extrabold text-brand-950 leading-tight mb-8" data-i18n="hero_title">
                 Operadora Global de<br><span class="text-brand-accent font-light italic">Activos de Lujo.</span>
             </h1>
-            <p class="text-lg md:text-xl text-stone-600 max-w-2xl mx-auto mb-12 font-medium" data-i18n="hero_desc">Infraestructura tecnológica y hospitalidad de autor para maximizar el rendimiento de su propiedad.</p>
+            <p class="text-lg md:text-xl text-stone-600 max-w-2xl mx-auto mb-12 font-medium" data-i18n="hero_desc">Hospitalidad de autor y tecnología para maximizar el rendimiento de su propiedad.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#auditoria" class="bg-brand-950 text-white px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-brand-accent transition shadow-xl" data-i18n="hero_cta1">Auditoría Estratégica</a>
-                <a href="#portfolio" class="bg-white border border-stone-200 text-brand-950 px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-stone-50 transition" data-i18n="hero_cta2">Ver Unidades</a>
+                <a href="#auditoria" class="bg-brand-950 text-white px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-brand-accent transition shadow-xl" data-i18n="hero_cta1">Auditoría de Activo</a>
+                <a href="#portfolio" class="bg-white border border-stone-200 text-brand-950 px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-stone-50 transition" data-i18n="hero_cta2">Ver Portafolio</a>
             </div>
         </div>
     </section>
@@ -75,138 +71,134 @@
         <div class="max-w-7xl mx-auto px-6 text-center mb-16">
             <span class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-4 block" data-i18n="port_label">Operaciones Activas</span>
             <h2 class="text-4xl font-extrabold text-brand-950 mb-4" data-i18n="port_title">Nuestro Portafolio Matriz</h2>
-            <p class="text-stone-500 max-w-2xl mx-auto" data-i18n="port_desc">Gestionamos actualmente 8 unidades estratégicas con un ADR superior al promedio del mercado.</p>
+            <p class="text-stone-500 max-w-2xl mx-auto" data-i18n="port_desc">Gestionamos actualmente 8 unidades estratégicas en mercados de alta rentabilidad.</p>
         </div>
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="card-shadow bg-stone-50 p-2 rounded-sm border border-stone-100">
+        
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <a href="https://www.airbnb.com.ec/rooms/1172501615958996589" target="_blank" class="unit-card block bg-stone-50 p-2 rounded-sm border border-stone-100 group">
                 <div class="h-64 overflow-hidden mb-4 relative">
                     <span class="absolute top-3 left-3 bg-brand-950 text-white text-[8px] font-bold px-2 py-1 uppercase tracking-widest z-10">Ecuador</span>
-                    <img src="casa.jpg" class="w-full h-full object-cover" alt="Casa Colibries">
+                    <img src="casa.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Casa Colibries">
+                    <div class="absolute inset-0 bg-brand-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white text-[10px] font-bold uppercase tracking-widest border border-white px-4 py-2">Reservar ahora</span>
+                    </div>
                 </div>
-                <h4 class="font-bold text-sm uppercase tracking-wide px-2">Casa Colibríes</h4>
-                <p class="text-[10px] text-stone-400 uppercase tracking-widest px-2 pb-4 italic">Unidad Estrella - Cotacachi</p>
+                <h4 class="font-bold text-sm uppercase tracking-wide px-2 text-brand-950">Casa Colibríes</h4>
+                <p class="text-[10px] text-stone-400 uppercase tracking-widest px-2 pb-4 italic">Unidad Estrella · Cotacachi</p>
+            </a>
+
+            <div class="unit-card bg-stone-50 p-2 rounded-sm border border-stone-100 opacity-60 grayscale hover:grayscale-0 transition-all">
+                <div class="h-64 bg-stone-200 flex items-center justify-center mb-4"><span class="text-stone-400 text-[10px] font-bold uppercase tracking-widest">México</span></div>
+                <h4 class="font-bold text-sm uppercase tracking-wide px-2">Unidad Riviera</h4>
+                <p class="text-[10px] text-stone-400 uppercase tracking-widest px-2 pb-4 italic">Operación Playa del Carmen</p>
             </div>
-            <div class="card-shadow bg-stone-50 p-2 rounded-sm border border-stone-100 opacity-80">
-                <div class="h-64 bg-stone-200 flex items-center justify-center mb-4">
-                    <span class="text-stone-400 text-[10px] font-bold uppercase tracking-tighter">Próximamente: México</span>
-                </div>
-                <h4 class="font-bold text-sm uppercase tracking-wide px-2">Residencia Playa</h4>
-                <p class="text-[10px] text-stone-400 uppercase tracking-widest px-2 pb-4 italic">Operación Riviera Maya</p>
-            </div>
-            <div class="card-shadow bg-stone-50 p-2 rounded-sm border border-stone-100 opacity-80">
-                <div class="h-64 bg-stone-200 flex items-center justify-center mb-4">
-                    <span class="text-stone-400 text-[10px] font-bold uppercase tracking-tighter">Próximamente: España</span>
-                </div>
-                <h4 class="font-bold text-sm uppercase tracking-wide px-2">Suite Gran Vía</h4>
+            <div class="unit-card bg-stone-50 p-2 rounded-sm border border-stone-100 opacity-60 grayscale">
+                <div class="h-64 bg-stone-200 flex items-center justify-center mb-4"><span class="text-stone-400 text-[10px] font-bold uppercase tracking-widest">España</span></div>
+                <h4 class="font-bold text-sm uppercase tracking-wide px-2">Residencia Europea</h4>
                 <p class="text-[10px] text-stone-400 uppercase tracking-widest px-2 pb-4 italic">Operación Madrid</p>
             </div>
-            <div class="card-shadow bg-stone-50 p-2 rounded-sm border border-stone-100 opacity-60 flex flex-col justify-center items-center h-full min-h-[300px]">
-                <span class="text-brand-accent text-3xl font-light">+5</span>
-                <p class="text-[9px] font-bold uppercase tracking-widest text-stone-400 mt-2">Unidades Adicionales</p>
+
+            <div class="flex flex-col justify-center items-center bg-brand-950 p-8 rounded-sm text-center">
+                <span class="text-brand-accent text-5xl font-light mb-2">08</span>
+                <p class="text-[9px] font-bold uppercase tracking-widest text-white">Unidades Gestionadas<br>por la Matriz</p>
             </div>
+
         </div>
     </section>
 
     <section id="management" class="py-24 bg-brand-warm">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+            
             <div>
-                <span class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-4 block" data-i18n="mgmt_label">Gestión de Rendimiento</span>
-                <h2 class="text-4xl md:text-5xl font-extrabold text-brand-950 mb-8" data-i18n="mgmt_title">Tecnología aplicada al ROI.</h2>
+                <span class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-4 block" data-i18n="mgmt_label">Management Partner</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-brand-950 mb-8" data-i18n="mgmt_title">Infraestructura para Propietarios.</h2>
                 <div class="space-y-8">
                     <div class="flex gap-6">
-                        <div class="w-12 h-12 bg-white flex items-center justify-center shadow-md rounded-full flex-shrink-0 text-brand-accent font-bold italic">1</div>
+                        <div class="w-12 h-12 bg-white flex items-center justify-center shadow-sm rounded-full flex-shrink-0 text-brand-accent font-bold italic">ROI</div>
                         <div>
-                            <h4 class="font-bold text-brand-950 text-sm uppercase tracking-widest mb-2" data-i18n="mgmt_f1_t">Precios Dinámicos</h4>
-                            <p class="text-stone-500 text-sm leading-relaxed" data-i18n="mgmt_f1_d">Algoritmos que ajustan su tarifa cada 24 horas según la demanda global.</p>
+                            <h4 class="font-bold text-brand-950 text-sm uppercase tracking-widest mb-2" data-i18n="mgmt_f1_t">Maximización de ADR</h4>
+                            <p class="text-stone-500 text-sm leading-relaxed" data-i18n="mgmt_f1_d">Algoritmos de precios dinámicos para capturar el valor máximo cada noche.</p>
                         </div>
                     </div>
                     <div class="flex gap-6">
-                        <div class="w-12 h-12 bg-white flex items-center justify-center shadow-md rounded-full flex-shrink-0 text-brand-accent font-bold italic">2</div>
+                        <div class="w-12 h-12 bg-white flex items-center justify-center shadow-sm rounded-full flex-shrink-0 text-brand-accent font-bold italic">24/7</div>
                         <div>
-                            <h4 class="font-bold text-brand-950 text-sm uppercase tracking-widest mb-2" data-i18n="mgmt_f2_t">Visibilidad Multi-Canal</h4>
-                            <p class="text-stone-500 text-sm leading-relaxed" data-i18n="mgmt_f2_d">Sincronización instantánea en Airbnb, Booking, Marriott Bonvoy y Web Directa.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6">
-                        <div class="w-12 h-12 bg-white flex items-center justify-center shadow-md rounded-full flex-shrink-0 text-brand-accent font-bold italic">3</div>
-                        <div>
-                            <h4 class="font-bold text-brand-950 text-sm uppercase tracking-widest mb-2" data-i18n="mgmt_f3_t">IA en Atención</h4>
-                            <p class="text-stone-500 text-sm leading-relaxed" data-i18n="mgmt_f3_d">Respuesta inmediata a huéspedes las 24 horas, garantizando puntuaciones de 5 estrellas.</p>
+                            <h4 class="font-bold text-brand-950 text-sm uppercase tracking-widest mb-2" data-i18n="mgmt_f2_t">Operación Tecnológica</h4>
+                            <p class="text-stone-500 text-sm leading-relaxed" data-i18n="mgmt_f2_d">Atención automatizada las 24 horas para garantizar las 5 estrellas.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bg-brand-950 p-12 text-white rounded-sm shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-brand-accent/20 rounded-full -mr-16 -mt-16 blur-3xl"></div>
-                <h3 class="text-2xl font-bold mb-6" data-i18n="mgmt_box_t">¿Es dueño en México o España?</h3>
-                <p class="text-stone-400 text-sm mb-8 leading-relaxed" data-i18n="mgmt_box_d">Buscamos expandir nuestra Matriz con propiedades que cumplan nuestro estándar de curaduría. Obtenga un reporte de rentabilidad gratuito.</p>
-                <a href="#auditoria" class="inline-block bg-brand-accent text-white px-8 py-4 font-bold uppercase text-[10px] tracking-widest hover:bg-white hover:text-brand-950 transition">Solicitar Auditoría</a>
+
+            <div class="bg-brand-950 p-12 text-white rounded-sm shadow-2xl">
+                <h3 class="text-2xl font-bold mb-6">Expansión México & España</h3>
+                <p class="text-stone-400 text-sm mb-8 leading-relaxed">Nuestra matriz global se encarga de todo el ciclo: marketing, mantenimiento y gestión fiscal internacional.</p>
+                <a href="#auditoria" class="inline-block bg-brand-accent text-white px-8 py-4 font-bold uppercase text-[10px] tracking-widest hover:bg-white hover:text-brand-950 transition">Solicitar Auditoría de Activo</a>
             </div>
         </div>
     </section>
 
     <section id="auditoria" class="py-24 bg-white">
         <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-extrabold mb-12" data-i18n="form_title">Inicie la Transformación de su Activo</h2>
+            <h2 class="text-3xl font-extrabold mb-12" data-i18n="form_title">Inicie su Auditoría de Rentabilidad</h2>
             <form id="auditForm" class="space-y-6 text-left">
                 <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" id="nombre" placeholder="Nombre" required class="w-full border-b border-stone-200 py-4 outline-none focus:border-brand-accent transition bg-transparent">
-                    <input type="tel" id="whatsapp" placeholder="WhatsApp / Celular" required class="w-full border-b border-stone-200 py-4 outline-none focus:border-brand-accent transition bg-transparent">
+                    <input type="text" id="nombre" placeholder="Nombre completo" required class="w-full border-b border-stone-200 py-4 outline-none focus:border-brand-accent transition bg-transparent">
+                    <input type="tel" id="whatsapp" placeholder="WhatsApp (Ej: +593...)" required class="w-full border-b border-stone-200 py-4 outline-none focus:border-brand-accent transition bg-transparent">
                 </div>
-                <input type="text" id="propiedad" placeholder="Ubicación o link de su propiedad" class="w-full border-b border-stone-200 py-4 outline-none focus:border-brand-accent transition bg-transparent">
-                <button type="submit" class="w-full bg-brand-950 text-white font-bold py-5 uppercase tracking-[0.3em] text-xs hover:bg-brand-accent transition shadow-xl" data-i18n="form_btn">Contactar a Matriz Global</button>
+                <input type="text" id="propiedad" placeholder="Enlace de su propiedad o ubicación" class="w-full border-b border-stone-200 py-4 outline-none focus:border-brand-accent transition bg-transparent">
+                <button type="submit" class="w-full bg-brand-950 text-white font-bold py-5 uppercase tracking-[0.3em] text-xs hover:bg-brand-accent transition shadow-xl" data-i18n="form_btn">Enviar a Matriz Global</button>
             </form>
         </div>
     </section>
 
-    <footer class="bg-stone-50 py-20 border-t border-stone-200 text-center md:text-left">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
+    <footer class="bg-stone-50 py-20 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
             <div>
                 <p class="text-brand-950 font-extrabold text-2xl tracking-tighter mb-2">Kivora Stays</p>
-                <p class="text-[10px] uppercase font-bold tracking-[0.4em] text-stone-400" data-i18n="footer_tag">Global Operations Group</p>
+                <p class="text-[10px] uppercase font-bold tracking-[0.4em] text-stone-400">Operadora Global de Hospitalidad</p>
             </div>
-            <div class="flex gap-10 text-[10px] font-bold uppercase tracking-widest text-stone-500">
-                <a href="mailto:info@kivorastays.com" class="hover:text-brand-accent">info@kivorastays.com</a>
-                <a href="mailto:reservas@kivorastays.com" class="hover:text-brand-accent">reservas@kivorastays.com</a>
+            
+            <div class="flex flex-col md:flex-row gap-6 md:gap-10 text-[10px] font-bold uppercase tracking-widest text-stone-500">
+                <a href="mailto:info@kivorastays.com" class="hover:text-brand-accent transition">info@kivorastays.com</a>
+                <a href="mailto:reservas@kivorastays.com" class="hover:text-brand-accent transition">reservas@kivorastays.com</a>
             </div>
-            <div class="text-[10px] text-stone-400 uppercase tracking-widest">© 2026 Kivora Stays. Ecuador · Mexico · Spain</div>
+
+            <div class="text-[10px] text-stone-400 uppercase tracking-widest">© 2026 Kivora Matriz. EC · MX · ES</div>
         </div>
     </footer>
 
     <script>
+        // --- DICCIONARIO DE TRADUCCIONES ---
         const translations = {
             es: {
                 nav_about: "Matriz", nav_portfolio: "Unidades", nav_mgmt: "Gestión ROI", nav_cta: "Consultoría",
                 hero_tag: "Mexico · Spain · Ecuador",
                 hero_title: `Operadora Global de<br><span class="text-brand-accent font-light italic">Activos de Lujo.</span>`,
-                hero_desc: "Infraestructura tecnológica y hospitalidad de autor para maximizar el rendimiento de su propiedad.",
-                hero_cta1: "Auditoría Estratégica", hero_cta2: "Ver Unidades",
-                port_label: "Operaciones Activas", port_title: "Nuestro Portafolio Matriz", port_desc: "Gestionamos actualmente 8 unidades estratégicas con un ADR superior al promedio.",
-                mgmt_label: "Gestión de Rendimiento", mgmt_title: "Tecnología aplicada al ROI.",
-                mgmt_f1_t: "Precios Dinámicos", mgmt_f1_d: "Algoritmos que ajustan su tarifa cada 24 horas según la demanda global.",
-                mgmt_f2_t: "Visibilidad Multi-Canal", mgmt_f2_d: "Sincronización instantánea en Airbnb, Booking y Web Directa.",
-                mgmt_f3_t: "IA en Atención", mgmt_f3_d: "Respuesta inmediata las 24 horas, garantizando 5 estrellas.",
-                mgmt_box_t: "¿Es dueño en México o España?", mgmt_box_d: "Buscamos expandir nuestra Matriz con propiedades exclusivas. Obtenga un reporte gratis.",
-                form_title: "Inicie la Transformación de su Activo", form_btn: "Contactar a Matriz Global",
-                footer_tag: "Global Operations Group"
+                hero_desc: "Hospitalidad de autor y tecnología para maximizar el rendimiento de su propiedad.",
+                hero_cta1: "Auditoría de Activo", hero_cta2: "Ver Portafolio",
+                port_label: "Operaciones Activas", port_title: "Nuestro Portafolio Matriz", port_desc: "Gestionamos actualmente 8 unidades estratégicas en mercados de alta rentabilidad.",
+                mgmt_label: "Management Partner", mgmt_title: "Infraestructura para Propietarios.",
+                mgmt_f1_t: "Maximización de ADR", mgmt_f1_d: "Algoritmos de precios dinámicos para capturar el valor máximo cada noche.",
+                mgmt_f2_t: "Operación Tecnológica", mgmt_f2_d: "Atención automatizada las 24 horas para garantizar las 5 estrellas.",
+                form_title: "Inicie su Auditoría de Rentabilidad", form_btn: "Enviar a Matriz Global"
             },
             en: {
                 nav_about: "Global Hub", nav_portfolio: "Units", nav_mgmt: "ROI Management", nav_cta: "Free Audit",
                 hero_tag: "Mexico · Spain · Ecuador",
                 hero_title: `Global Operator of<br><span class="text-brand-accent font-light italic">Luxury Assets.</span>`,
-                hero_desc: "Technological infrastructure and signature hospitality to maximize your property's performance.",
-                hero_cta1: "Strategic Audit", hero_cta2: "View Units",
-                port_label: "Active Operations", port_title: "Our Hub Portfolio", port_desc: "We currently manage 8 strategic units with market-leading ADR.",
-                mgmt_label: "Performance Management", mgmt_title: "Technology applied to ROI.",
-                mgmt_f1_t: "Dynamic Pricing", mgmt_f1_d: "Algorithms that adjust your rate every 24 hours based on global demand.",
-                mgmt_f2_t: "Multi-Channel Visibility", mgmt_f2_d: "Instant synchronization across Airbnb, Booking, and Direct Web.",
-                mgmt_f3_t: "AI Guest Support", mgmt_f3_d: "Immediate 24-hour response, ensuring 5-star ratings.",
-                mgmt_box_t: "Own a property in Mexico or Spain?", mgmt_box_d: "We are expanding our Hub with exclusive properties. Get a free profitability report.",
-                form_title: "Start Your Asset Transformation", form_btn: "Contact Global Hub",
-                footer_tag: "Global Operations Group"
+                hero_desc: "Signature hospitality and technology to maximize your property's performance.",
+                hero_cta1: "Asset Audit", hero_cta2: "View Portfolio",
+                port_label: "Active Operations", port_title: "Our Hub Portfolio", port_desc: "We currently manage 8 strategic units in high-yield markets.",
+                mgmt_label: "Management Partner", mgmt_title: "Infrastructure for Owners.",
+                mgmt_f1_t: "ADR Maximization", mgmt_f1_d: "Dynamic pricing algorithms to capture maximum value every night.",
+                mgmt_f2_t: "Tech-Driven Operations", mgmt_f2_d: "24/7 automated support to guarantee 5-star reviews.",
+                form_title: "Start Your Profitability Audit", form_btn: "Send to Global Hub"
             }
         };
 
+        // --- FUNCION DE IDIOMA ---
         let currentLang = 'es';
         function updateContent(lang) {
             document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -221,13 +213,14 @@
             });
         });
 
+        // --- FUNCION WHATSAPP ---
         document.getElementById('auditForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const nombre = document.getElementById('nombre').value;
             const phone = document.getElementById('whatsapp').value;
             const prop = document.getElementById('propiedad').value;
             const myNumber = "593995315716";
-            const text = `Hola Kivora Global, soy *${nombre}*.%0A%0AInteresado en Consultoría de Activos.%0A📍 Propiedad: ${prop}%0A📱 Contacto: ${phone}`;
+            const text = `Hola Kivora Global, soy *${nombre}*.%0A%0AInteresado en Auditoría de Rentabilidad.%0A📍 Propiedad: ${prop}%0A📱 Contacto: ${phone}`;
             window.open(`https://wa.me/${myNumber}?text=${text}`, '_blank');
         });
     </script>
