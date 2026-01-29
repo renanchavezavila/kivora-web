@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas Frecuentes | Kivora Stays Matriz Global</title>
+    <title>Centro de Ayuda | Kivora Stays</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,14 +22,22 @@
     </script>
     <style>
         .glass-nav { background: rgba(253, 252, 251, 0.95); backdrop-filter: blur(12px); }
-        .hero-gradient { background: linear-gradient(135deg, rgba(28, 25, 23, 0.9) 0%, rgba(28, 25, 23, 0.6) 50%, rgba(28, 25, 23, 0.9) 100%); }
+        .hero-gradient { background: linear-gradient(135deg, rgba(28, 25, 23, 0.9) 0%, rgba(28, 25, 23, 0.6) 100%); }
+        /* Animación suave para las respuestas */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
     </style>
 </head>
 
 <body class="bg-brand-light text-brand-950 antialiased">
 
     <nav class="fixed w-full z-50 glass-nav border-b border-stone-200/50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative z-50">
             <div class="flex items-center gap-3">
                 <a href="index.html" class="flex items-center gap-3">
                     <div class="w-9 h-9 bg-brand-950 flex items-center justify-center rounded-sm text-white font-extrabold text-xl">K</div>
@@ -39,124 +47,129 @@
                     </div>
                 </a>
             </div>
+
             <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-stone-500">
                 <a href="index.html" class="hover:text-brand-accent transition">Inicio</a>
-                <a href="gestion.html" class="hover:text-brand-accent transition">Gestión</a>
-                <a href="faq.html" class="text-brand-accent transition font-bold">Ayuda & FAQ</a>
+                <a href="gestion.html" class="hover:text-brand-accent transition">Gestión & ROI</a>
+                <a href="faq.html" class="text-brand-accent font-bold transition">Centro de Ayuda</a>
+                <a href="blog.html" class="hover:text-brand-accent transition">Insights</a>
             </div>
-            <a href="mailto:gerencia@kivorastays.com" class="bg-brand-950 text-white px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition shadow-lg">Contacto</a>
+
+            <a href="mailto:gerencia@kivorastays.com" class="hidden md:block bg-brand-950 text-white px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition shadow-lg">Contacto</a>
+
+            <button id="mobileMenuBtn" class="md:hidden text-brand-950 focus:outline-none p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="fixed inset-0 bg-brand-light z-40 flex flex-col items-center justify-start pt-32 gap-10 opacity-0 pointer-events-none transition-opacity duration-300 h-screen w-screen">
+            <a href="index.html" class="text-2xl font-bold text-brand-950 hover:text-brand-accent" onclick="closeMenu()">Inicio</a>
+            <a href="gestion.html" class="text-2xl font-bold text-brand-950 hover:text-brand-accent" onclick="closeMenu()">Gestión & ROI</a>
+            <a href="faq.html" class="text-2xl font-bold text-brand-accent" onclick="closeMenu()">Centro de Ayuda</a>
+            <a href="blog.html" class="text-2xl font-bold text-brand-950 hover:text-brand-accent" onclick="closeMenu()">Insights</a>
+            <a href="mailto:gerencia@kivorastays.com" class="bg-brand-950 text-white px-10 py-5 rounded-full text-xs font-bold uppercase tracking-widest mt-4 shadow-xl">Contacto</a>
         </div>
     </nav>
 
-    <section class="relative pt-48 pb-32 bg-cover bg-center flex items-center justify-center text-center" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032&auto=format&fit=crop');">
-        <div class="absolute inset-0 hero-gradient"></div>
-        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
-            <span class="text-brand-accent font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">Centro de Ayuda</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-tight">Respuestas claras, <br><span class="text-brand-accent italic">inversiones seguras.</span></h1>
-            <p class="text-stone-200 max-w-2xl mx-auto text-lg leading-relaxed mb-10 font-medium">Entendemos que entregar su propiedad requiere confianza. Aquí resolvemos sus dudas operativas, financieras y legales.</p>
+    <section class="relative pt-40 pb-20 bg-brand-950 text-white text-center">
+        <div class="max-w-3xl mx-auto px-6 relative z-10">
+            <span class="text-brand-accent font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Soporte Kivora</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-6">Preguntas Frecuentes</h1>
+            <p class="text-stone-400 text-sm md:text-base leading-relaxed">Resolvemos las dudas más comunes de nuestros socios propietarios en Ecuador, México y España.</p>
         </div>
     </section>
 
     <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="w-12 h-1 bg-brand-accent block mx-auto mb-6"></span>
-                <h2 class="text-3xl font-extrabold text-brand-950">Inicio de Operaciones</h2>
-            </div>
-            
-            <div class="space-y-8">
-                <div class="bg-brand-warm p-8 rounded-sm border border-stone-100 hover:border-brand-accent transition duration-300">
-                    <h3 class="font-bold text-lg text-brand-950 mb-3 flex items-center gap-3">
-                        <span class="text-brand-accent">01.</span> ¿Necesito estar en el país para empezar?
-                    </h3>
-                    <p class="text-stone-600 text-sm leading-relaxed pl-8 border-l-2 border-stone-200">
-                        Absolutamente no. Nuestra Matriz Global está diseñada para onboarding remoto. Formalizamos el contrato digitalmente y coordinamos la auditoría inicial, fotografía y puesta en marcha con nuestros equipos locales sin que usted tenga que viajar.
-                    </p>
-                </div>
-                <div class="bg-brand-warm p-8 rounded-sm border border-stone-100 hover:border-brand-accent transition duration-300">
-                    <h3 class="font-bold text-lg text-brand-950 mb-3 flex items-center gap-3">
-                        <span class="text-brand-accent">02.</span> ¿Hay un plazo forzoso en el contrato?
-                    </h3>
-                    <p class="text-stone-600 text-sm leading-relaxed pl-8 border-l-2 border-stone-200">
-                        Creemos en ganar su lealtad con resultados, no con ataduras. Nuestros contratos son flexibles y pueden cancelarse con un aviso previo de 30 días, siempre respetando las reservas ya confirmadas de futuros huéspedes.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-brand-950 text-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="w-12 h-1 bg-brand-accent block mx-auto mb-6"></span>
-                <h2 class="text-3xl font-extrabold text-white">Finanzas Transparentes</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white/5 p-8 rounded-sm border border-white/10">
-                    <h3 class="font-bold text-brand-accent text-lg mb-4">¿Cuándo y cómo recibo mi dinero?</h3>
-                    <p class="text-stone-400 text-sm leading-relaxed">
-                        Dependiendo de la configuración, puede recibir los pagos 24 horas después del check-in (vía Airbnb) o mediante una liquidación mensual consolidada. Utilizamos tecnología Fintech para transferir a cuentas en México, España o Ecuador minimizando comisiones.
-                    </p>
-                </div>
-                <div class="bg-white/5 p-8 rounded-sm border border-white/10">
-                    <h3 class="font-bold text-brand-accent text-lg mb-4">¿Quién paga la limpieza y servicios?</h3>
-                    <p class="text-stone-400 text-sm leading-relaxed">
-                        La tarifa de limpieza la paga el huésped al 100%. Los servicios básicos (luz, agua, internet) son responsabilidad del propietario, pero nosotros podemos gestionar el pago para que usted no se preocupe por cortes.
-                    </p>
-                </div>
-                <div class="bg-white/5 p-8 rounded-sm border border-white/10">
-                    <h3 class="font-bold text-brand-accent text-lg mb-4">¿Cómo se definen los precios por noche?</h3>
-                    <p class="text-stone-400 text-sm leading-relaxed">
-                        No adivinamos. Usamos algoritmos de Revenue Management que analizan la oferta y demanda en tiempo real, ajustando el precio diariamente para maximizar sus ingresos, similar a como lo hacen las aerolíneas.
-                    </p>
-                </div>
-                <div class="bg-white/5 p-8 rounded-sm border border-white/10">
-                    <h3 class="font-bold text-brand-accent text-lg mb-4">¿Debo pagar impuestos?</h3>
-                    <p class="text-stone-400 text-sm leading-relaxed">
-                        Sí, como en cualquier negocio de renta. Nosotros proporcionamos reportes detallados de ingresos brutos y netos para que su contador pueda declarar impuestos fácilmente en su país de residencia fiscal (México, España o Ecuador).
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="w-12 h-1 bg-brand-accent block mx-auto mb-6"></span>
-                <h2 class="text-3xl font-extrabold text-brand-950">Seguridad y Mantenimiento</h2>
-            </div>
-            
-            <div class="space-y-8">
-                <div class="bg-brand-warm p-8 rounded-sm border border-stone-100 hover:border-brand-accent transition duration-300">
-                    <h3 class="font-bold text-lg text-brand-950 mb-3 flex items-center gap-3">
-                        <span class="text-brand-accent">🛡️</span> ¿Qué pasa si un huésped daña algo?
-                    </h3>
-                    <p class="text-stone-600 text-sm leading-relaxed pl-10">
-                        Tenemos un protocolo de triple protección: 1) Filtro estricto de huéspedes (no aceptamos perfiles sin verificar), 2) Depósitos de seguridad, y 3) Coberturas de seguros de plataformas (como AirCover hasta $3M USD). Nosotros gestionamos todo el proceso de reclamación.
-                    </p>
-                </div>
-                <div class="bg-brand-warm p-8 rounded-sm border border-stone-100 hover:border-brand-accent transition duration-300">
-                    <h3 class="font-bold text-lg text-brand-950 mb-3 flex items-center gap-3">
-                        <span class="text-brand-accent">📅</span> ¿Puedo usar mi propiedad cuando quiera?
-                    </h3>
-                    <p class="text-stone-600 text-sm leading-relaxed pl-10">
-                        ¡Por supuesto! Es su activo. Solo necesita bloquear las fechas en nuestro calendario compartido con anticipación para que no recibamos reservas en esos días. Su casa sigue siendo su casa.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-brand-light text-center border-t border-stone-200">
         <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-2xl font-bold mb-6 text-brand-950">¿Tiene una pregunta específica?</h2>
-            <p class="text-stone-500 mb-10 text-sm">Nuestro equipo de Gerencia Global está listo para responder cualquier inquietud técnica o comercial.</p>
-            <a href="https://wa.me/593995315716" target="_blank" class="inline-flex items-center gap-3 bg-brand-950 text-white px-10 py-4 font-bold uppercase tracking-widest text-xs hover:bg-brand-accent transition shadow-xl">
-                <span>Chatear por WhatsApp</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            </a>
+            
+            <div class="mb-12">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-6 border-b border-stone-200 pb-2">Modelo de Gestión</h3>
+                
+                <div class="space-y-4">
+                    <details class="group bg-brand-warm rounded-sm border border-stone-100 open:bg-white open:shadow-lg transition-all duration-300">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer p-6 list-none text-brand-950 hover:text-brand-accent transition">
+                            <span>¿Cómo funciona la comisión del 20%?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                            </span>
+                        </summary>
+                        <div class="text-stone-500 text-sm px-6 pb-6 leading-relaxed">
+                            Es muy simple: Nosotros solo ganamos si usted gana. Cobramos un 20% sobre los ingresos brutos generados por las reservas. Esto incluye la gestión completa (marketing, huéspedes, limpieza, precios). No hay costos fijos mensuales ni cuotas de alta.
+                        </div>
+                    </details>
+
+                    <details class="group bg-brand-warm rounded-sm border border-stone-100 open:bg-white open:shadow-lg transition-all duration-300">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer p-6 list-none text-brand-950 hover:text-brand-accent transition">
+                            <span>¿Puedo usar mi propiedad cuando quiera?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                            </span>
+                        </summary>
+                        <div class="text-stone-500 text-sm px-6 pb-6 leading-relaxed">
+                            ¡Por supuesto! Es su propiedad. Le proporcionamos acceso a un calendario digital donde puede bloquear las fechas que desee para uso personal, familiar o de amigos, sin ningún costo ni penalización.
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-6 border-b border-stone-200 pb-2">Pagos y Finanzas</h3>
+                
+                <div class="space-y-4">
+                    <details class="group bg-brand-warm rounded-sm border border-stone-100 open:bg-white open:shadow-lg transition-all duration-300">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer p-6 list-none text-brand-950 hover:text-brand-accent transition">
+                            <span>¿Cómo y cuándo recibo mis pagos?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                            </span>
+                        </summary>
+                        <div class="text-stone-500 text-sm px-6 pb-6 leading-relaxed">
+                            Realizamos la liquidación mensualmente. Entre el día 1 y 5 de cada mes, recibirá un reporte detallado y la transferencia bancaria directa a su cuenta (en Ecuador, México, España o USA).
+                        </div>
+                    </details>
+
+                    <details class="group bg-brand-warm rounded-sm border border-stone-100 open:bg-white open:shadow-lg transition-all duration-300">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer p-6 list-none text-brand-950 hover:text-brand-accent transition">
+                            <span>¿Quién paga la limpieza y los daños?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                            </span>
+                        </summary>
+                        <div class="text-stone-500 text-sm px-6 pb-6 leading-relaxed">
+                            La tarifa de limpieza la paga el huésped aparte (no sale de su bolsillo). En cuanto a daños, gestionamos el seguro de Airbnb ("AirCover") o el depósito de seguridad para cubrir cualquier incidente sin costo para usted.
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-6 border-b border-stone-200 pb-2">Requisitos de Ingreso</h3>
+                
+                <div class="space-y-4">
+                    <details class="group bg-brand-warm rounded-sm border border-stone-100 open:bg-white open:shadow-lg transition-all duration-300">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer p-6 list-none text-brand-950 hover:text-brand-accent transition">
+                            <span>¿Qué necesito para empezar?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                            </span>
+                        </summary>
+                        <div class="text-stone-500 text-sm px-6 pb-6 leading-relaxed">
+                            Su propiedad debe estar amueblada y en buen estado. Si ya lo está, podemos empezar en menos de 48 horas. Si necesita ayuda con el diseño interior o amueblado, nuestro equipo de "Kivora Design" puede encargarse del proyecto llave en mano.
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-950 text-white text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-2xl font-extrabold mb-4">¿Tiene una duda específica?</h2>
+            <p class="text-stone-400 mb-8 text-sm">Nuestro equipo de soporte a propietarios responde en menos de 2 horas.</p>
+            <a href="mailto:gerencia@kivorastays.com" class="inline-block bg-white text-brand-950 px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-brand-accent transition shadow-xl">Escribir a Soporte</a>
         </div>
     </section>
 
@@ -177,6 +190,25 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        function toggleMenu() {
+            const isHidden = mobileMenu.classList.contains('pointer-events-none');
+            if (isHidden) {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            }
+        }
 
+        function closeMenu() {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+    </script>
 </body>
 </html>
