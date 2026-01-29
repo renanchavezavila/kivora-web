@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kivora Stays | Matriz Global de Gestión de Activos</title>
+    <title>Kivora Insights | Inteligencia de Mercado Inmobiliario</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,9 +22,8 @@
     </script>
     <style>
         .glass-nav { background: rgba(253, 252, 251, 0.95); backdrop-filter: blur(12px); }
-        .hero-gradient { background: linear-gradient(135deg, rgba(28, 25, 23, 0.6) 0%, rgba(28, 25, 23, 0.3) 50%, rgba(28, 25, 23, 0.6) 100%); }
-        .unit-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        .unit-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+        .hero-gradient { background: linear-gradient(135deg, rgba(28, 25, 23, 0.95) 0%, rgba(28, 25, 23, 0.7) 100%); }
+        .article-card:hover .article-img { transform: scale(1.05); }
     </style>
 </head>
 
@@ -43,12 +42,13 @@
             </div>
 
             <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-stone-500">
+                <a href="index.html" class="hover:text-brand-accent transition">Inicio</a>
                 <a href="gestion.html" class="hover:text-brand-accent transition">Gestión & ROI</a>
                 <a href="faq.html" class="hover:text-brand-accent transition">Centro de Ayuda</a>
-                <a href="blog.html" class="hover:text-brand-accent transition">Insights</a>
+                <a href="blog.html" class="text-brand-accent font-bold transition">Insights</a>
             </div>
 
-            <a href="#auditoria" class="hidden md:block bg-brand-950 text-white px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition shadow-lg">Contacto Corporativo</a>
+            <a href="mailto:gerencia@kivorastays.com" class="hidden md:block bg-brand-950 text-white px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition shadow-lg">Contacto</a>
 
             <button id="mobileMenuBtn" class="md:hidden relative z-50 text-brand-950 focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -58,150 +58,96 @@
         </div>
 
         <div id="mobileMenu" class="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
+            <a href="index.html" class="text-xl font-bold text-brand-950 hover:text-brand-accent">Inicio</a>
             <a href="gestion.html" class="text-xl font-bold text-brand-950 hover:text-brand-accent">Gestión & ROI</a>
             <a href="faq.html" class="text-xl font-bold text-brand-950 hover:text-brand-accent">Centro de Ayuda</a>
-            <a href="blog.html" class="text-xl font-bold text-brand-950 hover:text-brand-accent">Insights</a>
-            <a href="#auditoria" onclick="document.getElementById('mobileMenu').classList.add('opacity-0', 'pointer-events-none');" class="bg-brand-950 text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest mt-4">Contacto</a>
+            <a href="blog.html" class="text-xl font-bold text-brand-accent">Insights</a>
+            <a href="mailto:gerencia@kivorastays.com" class="bg-brand-950 text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest mt-4">Contacto</a>
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop');">
-        <div class="absolute inset-0 hero-gradient"></div>
-        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20">
-            <p class="text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] mb-6">Mexico · Spain · Ecuador</p>
-            <h1 class="text-4xl md:text-8xl font-extrabold leading-tight mb-8">Operadora Global de<br><span class="text-brand-accent font-light italic">Activos de Lujo.</span></h1>
-            <p class="text-stone-200 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed mb-10 font-medium">Elevamos el estándar del Property Management. Tecnología de punta, optimización financiera y hospitalidad de autor en una sola Matriz.</p>
+    <section class="relative pt-40 pb-20 bg-brand-950 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-left relative z-10">
+                <span class="text-brand-accent font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">Kivora Market Intelligence</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-tight">Decisiones basadas en <span class="text-brand-accent italic">datos.</span></h1>
+                <p class="text-stone-400 text-lg leading-relaxed mb-10 font-medium">Análisis de tendencias, optimización de activos y visión estratégica para propietarios en Ecuador, México y España.</p>
+                <div class="flex gap-4">
+                    <span class="px-4 py-2 border border-brand-accent/30 rounded-full text-[10px] uppercase tracking-widest text-brand-accent">#RevenueManagement</span>
+                    <span class="px-4 py-2 border border-white/10 rounded-full text-[10px] uppercase tracking-widest text-stone-400">#RealEstate2026</span>
+                </div>
+            </div>
+            <div class="relative h-[400px] overflow-hidden rounded-sm opacity-80">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700" alt="Market Analysis">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-8 border-b border-stone-200 pb-2">Análisis de Portada</h2>
             
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="gestion.html" class="bg-brand-950 text-white px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-brand-accent transition shadow-xl border border-brand-950">Ver Modelo de Gestión</a>
-                <a href="#portfolio" class="bg-white text-brand-950 px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-stone-100 transition">Explorar Unidades</a>
-            </div>
+            <article class="group grid md:grid-cols-2 gap-12 cursor-pointer">
+                <div class="overflow-hidden rounded-sm h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Revenue Management">
+                </div>
+                <div class="flex flex-col justify-center text-left">
+                    <span class="text-brand-accent text-xs font-bold uppercase tracking-widest mb-3">Estrategia Global</span>
+                    <h3 class="text-3xl font-extrabold text-brand-950 mb-4 group-hover:text-brand-accent transition">Por qué el "Precio Fijo" está matando la rentabilidad de su activo en 2026.</h3>
+                    <p class="text-stone-500 leading-relaxed mb-6">El mercado ha cambiado. Los algoritmos de las OTAs penalizan la estática. Descubra cómo nuestra Matriz utiliza IA para ajustar tarifas 24 veces al día y capturar demanda invisible.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-brand-950 border-b border-brand-950 pb-1 w-fit group-hover:border-brand-accent group-hover:text-brand-accent transition">Leer Análisis Completo &rarr;</span>
+                </div>
+            </article>
         </div>
     </section>
 
-    <section id="portfolio" class="py-16 md:py-24 bg-white">
+    <section class="py-20 bg-brand-warm border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-4 block">Colección Exclusiva</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-950">Portafolio Bajo Gestión</h2>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-12 border-b border-stone-200 pb-2">Últimos Reportes</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
                 
-                <a href="https://www.airbnb.com.ec/rooms/1172501615958996589" target="_blank" class="unit-card block bg-stone-50 p-2 rounded-sm border border-stone-100 group relative overflow-hidden h-[420px]">
-                    <div class="h-full overflow-hidden relative rounded-sm">
-                        <img src="casa.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Casa Colibries">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-950/90 via-transparent to-transparent z-10"></div>
-                        <div class="absolute bottom-0 left-0 p-6 z-20 text-white text-left">
-                            <span class="bg-brand-accent text-brand-950 text-[9px] font-bold px-2 py-1 uppercase tracking-widest mb-2 inline-block">Activo</span>
-                            <h4 class="font-bold text-lg uppercase tracking-wide">Casa Colibríes</h4>
-                            <p class="text-[10px] uppercase tracking-widest opacity-80 mt-1">Ecuador · Cotacachi</p>
-                        </div>
+                <article class="article-card group bg-white p-4 rounded-sm border border-stone-100 shadow-sm hover:shadow-xl transition text-left">
+                    <div class="h-48 overflow-hidden rounded-sm mb-6 relative">
+                        <span class="absolute top-3 left-3 bg-brand-950 text-white text-[8px] font-bold px-2 py-1 uppercase tracking-widest z-10">Mercado México</span>
+                        <img src="https://images.unsplash.com/photo-1512813195386-6cf811ad3542?q=80&w=2070&auto=format&fit=crop" class="article-img w-full h-full object-cover transition duration-500" alt="Mexico Real Estate">
                     </div>
-                </a>
+                    <h4 class="text-xl font-bold text-brand-950 mb-3 group-hover:text-brand-accent transition leading-tight">Riviera Maya: ¿Saturación o Oportunidad de Nicho?</h4>
+                    <p class="text-stone-500 text-xs leading-relaxed mb-4">Analizamos los datos de ocupación de Tulum y Playa del Carmen para definir dónde invertir este año.</p>
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-stone-400">Lectura: 4 min</span>
+                </article>
 
-                <div class="unit-card bg-stone-900 p-2 rounded-sm h-[420px] relative overflow-hidden group">
-                    <div class="h-full w-full relative rounded-sm overflow-hidden">
-                        <img src="mexico.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-50 transition duration-700 group-hover:scale-110" alt="Mexico Real Estate">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-transparent to-transparent z-10"></div>
-                        
-                        <div class="absolute top-6 left-0 right-0 text-center z-20">
-                            <h4 class="text-white font-bold text-2xl uppercase mb-1">México</h4>
-                            <p class="text-brand-accent text-[10px] uppercase tracking-widest">Playa del Carmen · CDMX</p>
-                        </div>
-                        <div class="absolute bottom-6 left-0 right-0 text-center z-30">
-                            <a href="#auditoria" class="inline-block bg-white/10 backdrop-blur-md border border-white/30 text-white px-6 py-3 text-[9px] font-bold uppercase tracking-widest hover:bg-brand-accent hover:border-brand-accent hover:text-brand-950 transition">Postular Propiedad</a>
-                        </div>
+                <article class="article-card group bg-white p-4 rounded-sm border border-stone-100 shadow-sm hover:shadow-xl transition text-left">
+                    <div class="h-48 overflow-hidden rounded-sm mb-6 relative">
+                        <span class="absolute top-3 left-3 bg-brand-950 text-white text-[8px] font-bold px-2 py-1 uppercase tracking-widest z-10">Mercado España</span>
+                        <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=2070&auto=format&fit=crop" class="article-img w-full h-full object-cover transition duration-500" alt="Madrid Real Estate">
                     </div>
-                </div>
+                    <h4 class="text-xl font-bold text-brand-950 mb-3 group-hover:text-brand-accent transition leading-tight">Regulación de Alquileres en Madrid: Guía para Propietarios.</h4>
+                    <p class="text-stone-500 text-xs leading-relaxed mb-4">Cómo cumplir con las nuevas normativas de la UE y mantener su licencia turística activa y rentable.</p>
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-stone-400">Lectura: 6 min</span>
+                </article>
 
-                <div class="unit-card bg-stone-900 p-2 rounded-sm h-[420px] relative overflow-hidden group">
-                    <div class="h-full w-full relative rounded-sm overflow-hidden">
-                        <img src="espana.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-50 transition duration-700 group-hover:scale-110" alt="Madrid Real Estate">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-transparent to-transparent z-10"></div>
-                        
-                        <div class="absolute top-6 left-0 right-0 text-center z-20">
-                            <h4 class="text-white font-bold text-2xl uppercase mb-1">España</h4>
-                            <p class="text-brand-accent text-[10px] uppercase tracking-widest">Madrid · Costa del Sol</p>
-                        </div>
-                        <div class="absolute bottom-6 left-0 right-0 text-center z-30">
-                            <a href="#auditoria" class="inline-block bg-white/10 backdrop-blur-md border border-white/30 text-white px-6 py-3 text-[9px] font-bold uppercase tracking-widest hover:bg-brand-accent hover:border-brand-accent hover:text-brand-950 transition">Postular Propiedad</a>
-                        </div>
+                <article class="article-card group bg-white p-4 rounded-sm border border-stone-100 shadow-sm hover:shadow-xl transition text-left">
+                    <div class="h-48 overflow-hidden rounded-sm mb-6 relative">
+                        <span class="absolute top-3 left-3 bg-brand-950 text-white text-[8px] font-bold px-2 py-1 uppercase tracking-widest z-10">Tendencias</span>
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop" class="article-img w-full h-full object-cover transition duration-500" alt="Luxury Hospitality">
                     </div>
-                </div>
+                    <h4 class="text-xl font-bold text-brand-950 mb-3 group-hover:text-brand-accent transition leading-tight">Hospitalidad de Autor: El nuevo estándar del lujo.</h4>
+                    <p class="text-stone-500 text-xs leading-relaxed mb-4">Por qué los viajeros de alto valor prefieren experiencias curadas sobre hoteles de cadena en 2026.</p>
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-stone-400">Lectura: 3 min</span>
+                </article>
 
-                <div class="unit-card bg-brand-accent p-8 rounded-sm text-center h-[420px] flex flex-col justify-center items-center relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-brand-950 opacity-0 group-hover:opacity-10 transition duration-500"></div>
-                    <div class="relative z-10">
-                        <div class="w-12 h-12 bg-brand-950 text-white rounded-full flex items-center justify-center text-xl mx-auto mb-6">🤝</div>
-                        <h4 class="text-brand-950 font-extrabold text-2xl uppercase mb-4 leading-tight">¿Busca<br>Gestión?</h4>
-                        <p class="text-brand-950/80 text-xs mb-8 leading-relaxed max-w-[200px] mx-auto font-medium">Únase a nuestro portafolio global y maximice su rentabilidad.</p>
-                        <a href="mailto:gerencia@kivorastays.com" class="bg-brand-950 text-white px-8 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-950 transition shadow-xl">Aplicar Ahora</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 md:py-24 bg-brand-warm border-y border-stone-200">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="text-left">
-                <span class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-4 block">Modelo 360°</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-950 mb-6 leading-tight">Nosotros gestionamos.<br>Usted capitaliza.</h2>
-                <p class="text-stone-500 text-sm leading-relaxed mb-8">Desde la auditoría inicial hasta el Revenue Management diario. Nuestro modelo híbrido combina tecnología centralizada con ejecución local impecable.</p>
-                <ul class="space-y-4 mb-10">
-                    <li class="flex items-center gap-3 text-sm font-bold text-brand-950"><span class="text-brand-accent">✓</span> Comisión transparente del 20%</li>
-                    <li class="flex items-center gap-3 text-sm font-bold text-brand-950"><span class="text-brand-accent">✓</span> Soporte Multilingüe 24/7</li>
-                    <li class="flex items-center gap-3 text-sm font-bold text-brand-950"><span class="text-brand-accent">✓</span> Pagos eficientes en MX, ES y EC</li>
-                </ul>
-                <a href="gestion.html" class="inline-block border-b-2 border-brand-950 pb-1 text-xs font-bold uppercase tracking-widest hover:text-brand-accent hover:border-brand-accent transition">Ver Comparativa de Servicios &rarr;</a>
-            </div>
-            <div class="relative">
-                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070" class="rounded-sm shadow-2xl w-full" alt="Interior Design">
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 md:py-24 bg-white text-center">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-extrabold text-brand-950 mb-12">Kivora Insights</h2>
-            <div class="grid md:grid-cols-3 gap-8 text-left">
-                <a href="blog.html" class="group">
-                    <div class="h-64 overflow-hidden rounded-sm mb-4">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Revenue">
-                    </div>
-                    <h4 class="font-bold text-lg text-brand-950 group-hover:text-brand-accent transition">Precios Fijos vs. Dinámicos</h4>
-                    <p class="text-stone-500 text-xs mt-2">Por qué está perdiendo dinero si no usa IA.</p>
-                </a>
-                <a href="blog.html" class="group">
-                    <div class="h-64 overflow-hidden rounded-sm mb-4">
-                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2070" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Legal Law Real Estate">
-                    </div>
-                    <h4 class="font-bold text-lg text-brand-950 group-hover:text-brand-accent transition">Regulación Europea 2026</h4>
-                    <p class="text-stone-500 text-xs mt-2">Guía legal para propietarios en España.</p>
-                </a>
-                <a href="blog.html" class="group">
-                    <div class="h-64 overflow-hidden rounded-sm mb-4">
-                        <img src="https://images.unsplash.com/photo-1512813195386-6cf811ad3542?q=80&w=2070" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" alt="Mexico">
-                    </div>
-                    <h4 class="font-bold text-lg text-brand-950 group-hover:text-brand-accent transition">Oportunidad Riviera Maya</h4>
-                    <p class="text-stone-500 text-xs mt-2">Análisis de rentabilidad en Tulum.</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="auditoria" class="py-16 md:py-24 bg-brand-950 text-white text-center">
+    <section class="py-24 bg-brand-950 text-white text-center">
         <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-3xl font-extrabold mb-6">Inicie su Auditoría de Activo</h2>
-            <p class="text-stone-400 mb-12">Dé el primer paso hacia una gestión profesional. Sin compromiso.</p>
-            <form id="contactForm" class="space-y-6 text-left">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" id="nombre" placeholder="Nombre completo" required class="w-full bg-white/10 border border-white/20 py-4 px-6 text-white outline-none focus:border-brand-accent transition">
-                    <input type="tel" id="whatsapp" placeholder="WhatsApp / Teléfono" required class="w-full bg-white/10 border border-white/20 py-4 px-6 text-white outline-none focus:border-brand-accent transition">
-                </div>
-                <input type="text" id="propiedad" placeholder="Ubicación de su propiedad (Ej: Polanco, CDMX)" class="w-full bg-white/10 border border-white/20 py-4 px-6 text-white outline-none focus:border-brand-accent transition">
-                <button type="submit" class="w-full bg-brand-accent text-brand-950 font-bold py-5 uppercase tracking-[0.3em] text-xs hover:bg-white transition shadow-xl">Solicitar Contacto</button>
+            <h2 class="text-3xl font-extrabold mb-4">Inteligencia de Mercado en su Bandeja.</h2>
+            <p class="text-stone-400 mb-8 text-sm">Únase a 500+ propietarios que reciben nuestros reportes trimestrales sobre rentabilidad y tendencias globales.</p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('¡Gracias! Suscrito a la lista de Kivora.');">
+                <input type="email" placeholder="Su correo corporativo" class="flex-1 bg-white/10 border border-white/20 text-white px-6 py-4 outline-none focus:border-brand-accent transition">
+                <button type="submit" class="bg-brand-accent text-brand-950 px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-white transition">Suscribirse</button>
             </form>
         </div>
     </section>
@@ -223,18 +169,9 @@
             </div>
         </div>
     </footer>
-
+    
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const nombre = document.getElementById('nombre').value;
-            const phone = document.getElementById('whatsapp').value;
-            const prop = document.getElementById('propiedad').value;
-            const myNumber = "593995315716";
-            const text = `Hola Kivora Global, soy *${nombre}*.%0A%0ASolicito información de gestión.%0A📍 Propiedad: ${prop}%0A📱 Contacto: ${phone}`;
-            window.open(`https://wa.me/${myNumber}?text=${text}`, '_blank');
-        });
-
+        // Script del menú móvil
         const menuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         
