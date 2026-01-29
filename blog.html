@@ -31,7 +31,7 @@
 
     <nav class="fixed w-full z-50 glass-nav border-b border-stone-200/50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3 relative z-50">
                 <a href="index.html" class="flex items-center gap-3">
                     <div class="w-9 h-9 bg-brand-950 flex items-center justify-center rounded-sm text-white font-extrabold text-xl">K</div>
                     <div class="flex flex-col text-left">
@@ -40,12 +40,29 @@
                     </div>
                 </a>
             </div>
+
             <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-stone-500">
                 <a href="index.html" class="hover:text-brand-accent transition">Inicio</a>
-                <a href="gestion.html" class="hover:text-brand-accent transition">Gestión</a>
+                <a href="gestion.html" class="hover:text-brand-accent transition">Gestión & ROI</a>
+                <a href="faq.html" class="hover:text-brand-accent transition">Centro de Ayuda</a>
                 <a href="blog.html" class="text-brand-accent font-bold transition">Insights</a>
             </div>
-            <a href="mailto:gerencia@kivorastays.com" class="bg-brand-950 text-white px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition shadow-lg">Contacto</a>
+
+            <a href="mailto:gerencia@kivorastays.com" class="hidden md:block bg-brand-950 text-white px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition shadow-lg">Contacto</a>
+
+            <button id="mobileMenuBtn" class="md:hidden relative z-50 text-brand-950 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
+            <a href="index.html" class="text-xl font-bold text-brand-950 hover:text-brand-accent">Inicio</a>
+            <a href="gestion.html" class="text-xl font-bold text-brand-950 hover:text-brand-accent">Gestión & ROI</a>
+            <a href="faq.html" class="text-xl font-bold text-brand-950 hover:text-brand-accent">Centro de Ayuda</a>
+            <a href="blog.html" class="text-xl font-bold text-brand-accent">Insights</a>
+            <a href="mailto:gerencia@kivorastays.com" class="bg-brand-950 text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest mt-4">Contacto</a>
         </div>
     </nav>
 
@@ -103,7 +120,7 @@
                 <article class="article-card group bg-white p-4 rounded-sm border border-stone-100 shadow-sm hover:shadow-xl transition text-left">
                     <div class="h-48 overflow-hidden rounded-sm mb-6 relative">
                         <span class="absolute top-3 left-3 bg-brand-950 text-white text-[8px] font-bold px-2 py-1 uppercase tracking-widest z-10">Mercado España</span>
-                        <img src="https://images.unsplash.com/photo-1543783207-01237a905522?q=80&w=2070&auto=format&fit=crop" class="article-img w-full h-full object-cover transition duration-500" alt="Madrid Real Estate">
+                        <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=2070&auto=format&fit=crop" class="article-img w-full h-full object-cover transition duration-500" alt="Madrid Real Estate">
                     </div>
                     <h4 class="text-xl font-bold text-brand-950 mb-3 group-hover:text-brand-accent transition leading-tight">Regulación de Alquileres en Madrid: Guía para Propietarios.</h4>
                     <p class="text-stone-500 text-xs leading-relaxed mb-4">Cómo cumplir con las nuevas normativas de la UE y mantener su licencia turística activa y rentable.</p>
@@ -152,6 +169,20 @@
             </div>
         </div>
     </footer>
-
+    
+    <script>
+        // Script del menú móvil
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('pointer-events-none');
+            if (isHidden) {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+    </script>
 </body>
 </html>
