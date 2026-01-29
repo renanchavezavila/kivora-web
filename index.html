@@ -31,8 +31,8 @@
 <body class="bg-brand-light text-brand-950 antialiased">
 
     <nav class="fixed w-full z-50 glass-nav border-b border-stone-200/50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3 relative z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative z-50">
+            <div class="flex items-center gap-3">
                 <a href="index.html" class="flex items-center gap-3">
                     <div class="w-9 h-9 bg-brand-950 flex items-center justify-center rounded-sm text-white font-extrabold text-xl">K</div>
                     <div class="flex flex-col text-left">
@@ -50,18 +50,18 @@
 
             <a href="#auditoria" class="hidden md:block bg-brand-950 text-white px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition shadow-lg">Contacto Corporativo</a>
 
-            <button id="mobileMenuBtn" class="md:hidden relative z-50 text-brand-950 focus:outline-none">
+            <button id="mobileMenuBtn" class="md:hidden text-brand-950 focus:outline-none p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
         </div>
 
-        <div id="mobileMenu" class="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
-            <a href="gestion.html" class="text-xl font-bold text-brand-950 hover:text-brand-accent">Gestión & ROI</a>
-            <a href="faq.html" class="text-xl font-bold text-brand-950 hover:text-brand-accent">Centro de Ayuda</a>
-            <a href="blog.html" class="text-xl font-bold text-brand-950 hover:text-brand-accent">Insights</a>
-            <a href="#auditoria" onclick="document.getElementById('mobileMenu').classList.add('opacity-0', 'pointer-events-none');" class="bg-brand-950 text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest mt-4">Contacto</a>
+        <div id="mobileMenu" class="fixed inset-0 bg-brand-light z-40 flex flex-col items-center justify-start pt-32 gap-10 opacity-0 pointer-events-none transition-opacity duration-300 h-screen w-screen">
+            <a href="gestion.html" class="text-2xl font-bold text-brand-950 hover:text-brand-accent" onclick="closeMenu()">Gestión & ROI</a>
+            <a href="faq.html" class="text-2xl font-bold text-brand-950 hover:text-brand-accent" onclick="closeMenu()">Centro de Ayuda</a>
+            <a href="blog.html" class="text-2xl font-bold text-brand-950 hover:text-brand-accent" onclick="closeMenu()">Insights</a>
+            <a href="#auditoria" onclick="closeMenu()" class="bg-brand-950 text-white px-10 py-5 rounded-full text-xs font-bold uppercase tracking-widest mt-4 shadow-xl">Solicitar Contacto</a>
         </div>
     </nav>
 
@@ -219,6 +219,7 @@
     </footer>
 
     <script>
+        // Formulario WhatsApp
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const nombre = document.getElementById('nombre').value;
@@ -229,17 +230,24 @@
             window.open(`https://wa.me/${myNumber}?text=${text}`, '_blank');
         });
 
+        // Menú Móvil Script
         const menuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         
-        menuBtn.addEventListener('click', () => {
+        function toggleMenu() {
             const isHidden = mobileMenu.classList.contains('pointer-events-none');
             if (isHidden) {
                 mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
             } else {
                 mobileMenu.classList.add('opacity-0', 'pointer-events-none');
             }
-        });
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
     </script>
 </body>
 </html>
