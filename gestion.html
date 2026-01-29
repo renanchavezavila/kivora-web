@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Activos | Kivora Stays Matriz Global</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                extend: {
+                    colors: {
+                        brand: { 950: '#1c1917', accent: '#c5a059', light: '#fdfcfb', warm: '#f5f5f4' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav { background: rgba(253, 252, 251, 0.95); backdrop-filter: blur(12px); }
+        .hero-gradient { background: linear-gradient(135deg, rgba(28, 25, 23, 0.8) 0%, rgba(28, 25, 23, 0.4) 50%, rgba(28, 25, 23, 0.8) 100%); }
+    </style>
+</head>
+
+<body class="bg-brand-light text-brand-950 antialiased">
+
+    <nav class="fixed w-full z-50 glass-nav border-b border-stone-200/50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-9 h-9 bg-brand-950 flex items-center justify-center rounded-sm text-white font-extrabold text-xl">K</div>
+                    <div class="flex flex-col text-left">
+                        <span class="text-brand-950 font-extrabold text-xl leading-none tracking-tight">Kivora</span>
+                        <span class="text-brand-accent text-[10px] uppercase tracking-[0.3em] font-bold mt-1">Stays</span>
+                    </div>
+                </a>
+            </div>
+            <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-stone-500">
+                <a href="index.html" class="hover:text-brand-accent transition">Inicio</a>
+                <a href="#beneficios" class="hover:text-brand-accent transition">Beneficios</a>
+                <a href="#tabla" class="hover:text-brand-accent transition">Plan de Gestión</a>
+            </div>
+            <a href="mailto:gerencia@kivorastays.com" class="bg-brand-950 text-white px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition shadow-lg">Contacto</a>
+        </div>
+    </nav>
+
+    <section class="relative pt-48 pb-32 bg-cover bg-center flex items-center justify-center text-center" style="background-image: url('https://images.unsplash.com/photo-1613545325278-f24b0cae1224?q=80&w=2070&auto=format&fit=crop');">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
+            <span class="text-brand-accent font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">Asset Management Global</span>
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-8 leading-tight">Su propiedad, <span class="text-brand-accent italic">nuestra expertise.</span></h1>
+            <p class="text-stone-200 max-w-2xl mx-auto text-lg leading-relaxed mb-10 font-medium">Transformamos inmuebles de alto valor en activos financieros de rendimiento superior, gestionados con tecnología de punta desde nuestra Matriz.</p>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-24 bg-white text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <span class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-4 block">Por qué elegir Kivora</span>
+                <h2 class="text-4xl font-extrabold text-brand-950">Más que gestión, generamos valor.</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="flex flex-col items-center text-center p-8 bg-brand-warm rounded-sm border border-stone-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-brand-950 text-brand-accent rounded-full flex items-center justify-center text-3xl mb-6 shadow-sm">📈</div>
+                    <h3 class="text-xl font-bold text-brand-950 mb-4 uppercase tracking-wide">Rentabilidad Máxima</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">No usamos precios fijos. Nuestra IA analiza el mercado global 24/7 para ajustar tarifas y asegurar la mayor ocupación al mejor precio posible.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-8 bg-brand-950 rounded-sm text-white shadow-2xl scale-105 z-10 border border-brand-accent/20">
+                    <div class="w-16 h-16 bg-brand-accent text-brand-950 rounded-full flex items-center justify-center text-3xl mb-6 shadow-sm">🧘‍♂️</div>
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-wide">Libertad Absoluta</h3>
+                    <p class="text-stone-300 text-sm leading-relaxed">Recupere su tiempo. Nosotros atendemos a los huéspedes a las 3 A.M., coordinamos limpiezas y resolvemos emergencias. Usted solo disfruta los ingresos.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-8 bg-brand-warm rounded-sm border border-stone-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-brand-950 text-brand-accent rounded-full flex items-center justify-center text-3xl mb-6 shadow-sm">📊</div>
+                    <h3 class="text-xl font-bold text-brand-950 mb-4 uppercase tracking-wide">Control Total</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">Acceso a un dashboard de propietario en tiempo real. Vea sus reservas, ingresos y reportes financieros detallados cuando quiera, desde donde quiera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-64 bg-fixed bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop');">
+        <div class="h-full w-full bg-brand-950/50 flex items-center justify-center">
+            <h3 class="text-white text-2xl font-bold uppercase tracking-[0.2em] text-center">Excelencia Operativa <span class="text-brand-accent">Sin Fronteras</span></h3>
+        </div>
+    </div>
+
+    <section id="tabla" class="py-24 bg-white text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                 <span class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-4 block">Modelo Integral Kivora</span>
+                <h2 class="text-3xl font-extrabold text-brand-950 mb-6 leading-tight">Todo incluido en una sola comisión.</h2>
+                <p class="text-stone-500 text-sm max-w-2xl mx-auto leading-relaxed">Comparamos la gestión básica del mercado versus nuestro ecosistema tecnológico y operativo completo. Diseñado para maximizar su retorno sin esfuerzo.</p>
+            </div>
+
+            <div class="overflow-hidden rounded-sm shadow-xl border border-stone-200 relative z-10 bg-white">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr>
+                            <th class="py-8 px-6 text-xs uppercase tracking-widest font-bold text-left bg-brand-warm text-brand-950 w-5/12">Características del Servicio</th>
+                            <th class="py-8 px-6 text-xs uppercase tracking-widest font-bold text-center bg-stone-100 text-stone-400 w-3/12">Gestión Básica / Otros</th>
+                            <th class="py-8 px-6 text-center bg-brand-950 text-white w-4/12 relative overflow-hidden">
+                                <span class="text-sm font-extrabold uppercase tracking-widest block mb-1">Matriz Kivora</span>
+                                <span class="text-3xl font-extrabold text-brand-accent block leading-none">20%</span>
+                                <span class="text-[9px] uppercase tracking-widest text-brand-accent/80 block mt-2 font-bold bg-brand-accent/10 py-1 px-2 rounded-full mx-auto w-fit">TARIFA FLEXIBLE</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-stone-100">
+                        <tr class="hover:bg-brand-warm/50 transition"><td class="py-5 px-6 text-left font-bold text-brand-950">Revenue Management IA (Precios Dinámicos)</td><td class="text-center text-2xl text-stone-300">×</td><td class="text-center text-2xl text-brand-accent">✓</td></tr>
+                        <tr class="hover:bg-brand-warm/50 transition"><td class="py-5 px-6 text-left font-bold text-brand-950">Análisis de Mercado & Competencia Global</td><td class="text-center text-2xl text-stone-300">×</td><td class="text-center text-2xl text-brand-accent">✓</td></tr>
+                        
+                        <tr class="hover:bg-brand-warm/50 transition"><td class="py-5 px-6 text-left font-bold text-brand-950">Marketing Multicanal (20+ Portales Premium)</td><td class="text-center text-stone-500 font-medium text-xs">Limitado</td><td class="text-center text-2xl text-brand-accent">✓</td></tr>
+                        <tr class="hover:bg-brand-warm/50 transition"><td class="py-5 px-6 text-left font-bold text-brand-950">Coordinación de Fotografía Profesional</td><td class="text-center text-2xl text-stone-300">×</td><td class="text-center text-2xl text-brand-accent">✓</td></tr>
+                        <tr class="hover:bg-brand-warm/50 transition"><td class="py-5 px-6 text-left font-bold text-brand-950">Optimización SEO de Anuncios</td><td class="text-center text-2xl text-stone-300">×</td><td class="text-center text-2xl text-brand-accent">✓</td></tr>
+
+                        <tr class="hover:bg-brand-warm/50 transition"><td class="py-5 px-6 text-left font-bold text-brand-950">Atención al Huésped 24/7 (Trilingüe)</td><td class="text-center text-2xl text-stone-300">×</td><td class="text-center text-2xl text-brand-accent">✓</td></tr>
+                        <tr class="hover:bg-brand-warm/50 transition"><td class="py-5 px-6 text-left font-bold text-brand-950">Filtrado de Seguridad de Huéspedes</td><td class="text-center text-stone-500 font-medium text-xs">Básico</td><td class="text-center text-2xl text-brand-accent">✓</td></tr>
+                        <tr class="hover:bg-brand-warm/50 transition"><td class="py-5 px-6 text-left font-bold text-brand-950">Coordinación de Limpieza Hotelera</td><td class="text-center text-2xl text-stone-300">×</td><td class="text-center text-2xl text-brand-accent">✓</td></tr>
+                        <tr class="hover:bg-brand-warm/50 transition"><td class="py-5 px-6 text-left font-bold text-brand-950">Coordinación de Mantenimiento</td><td class="text-center text-2xl text-stone-300">×</td><td class="text-center text-2xl text-brand-accent">✓</td></tr>
+
+                        <tr class="hover:bg-brand-warm/50 transition"><td class="py-5 px-6 text-left font-bold text-brand-950">Integración de Cerraduras Inteligentes</td><td class="text-center text-2xl text-stone-300">×</td><td class="text-center text-2xl text-brand-accent">✓</td></tr>
+                        <tr class="hover:bg-brand-warm/50 transition"><td class="py-5 px-6 text-left font-bold text-brand-950">Dashboard Financiero en Tiempo Real</td><td class="text-center text-2xl text-stone-300">×</td><td class="text-center text-2xl text-brand-accent">✓</td></tr>
+                    </tbody>
+                </table>
+            </div>
+             <div class="mt-8 text-[10px] text-stone-500 text-center max-w-3xl mx-auto p-4 rounded-sm bg-brand-warm/50">
+                <p><b class="text-brand-950">* Nota sobre Tarifa Flexible:</b> El 20% es nuestra tarifa base estándar. Somos flexibles a revisar una tarifa promocional de inicio para nuevos socios con propiedades de alto potencial, sujeto a evaluación del portafolio.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-extrabold mb-8 text-brand-950">Hablemos de su rentabilidad.</h2>
+            <p class="text-stone-500 mb-12 text-lg">Solicite una evaluación de su propiedad y conversemos sobre una propuesta a su medida.</p>
+            <a href="mailto:gerencia@kivorastays.com" class="inline-block bg-brand-950 text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-brand-accent transition shadow-2xl">Contactar a Gerencia</a>
+        </div>
+    </section>
+
+    <footer class="bg-stone-50 py-20 border-t border-stone-200 text-center md:text-left">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-12">
+            <div class="md:w-1/4 text-center md:text-left">
+                <p class="text-brand-950 font-extrabold text-2xl tracking-tighter mb-2">Kivora Stays</p>
+                <p class="text-[10px] uppercase font-bold tracking-[0.4em] text-stone-400 leading-relaxed">Operadora Global de Hospitalidad</p>
+            </div>
+            <div class="flex flex-col gap-4 text-[10px] font-bold uppercase tracking-widest text-stone-500 text-center md:text-left">
+                <span class="text-brand-accent border-b border-stone-200 pb-2 mb-2 mx-auto md:mx-0">Soporte Regional</span>
+                <a href="mailto:ecuador@kivorastays.com" class="hover:text-brand-accent">ecuador@kivorastays.com</a>
+                <a href="mailto:mexico@kivorastays.com" class="hover:text-brand-accent">mexico@kivorastays.com</a>
+                <a href="mailto:espana@kivorastays.com" class="hover:text-brand-accent">espana@kivorastays.com</a>
+            </div>
+            <div class="text-[9px] text-stone-400 uppercase tracking-widest md:text-right text-center md:text-left">
+                © 2026 Kivora Matriz Global.<br>Quito · Playa del Carmen · Madrid
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
